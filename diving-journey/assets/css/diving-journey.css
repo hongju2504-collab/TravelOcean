@@ -1,0 +1,980 @@
+@import 'common.css';
+@import 'footer-b.css';
+
+body {
+    line-height: 1.6;
+    font-family: 'Noto Sans KR';
+    color: var(--black-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 120;
+}
+
+.hero-video-section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video-section video {
+    width: 120%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.75);
+}
+
+.diving-indicator-section {
+    min-height: 560vh;
+    position: relative;
+    background: radial-gradient(circle at 28% 25%, rgba(255, 255, 255, 0.15), transparent 46%), #072a85;
+}
+
+.diving-indicator-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 35% 38%, rgba(0, 0, 0, 0.38), transparent 24%);
+    pointer-events: none;
+}
+
+.indicator-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.indicator-intro-stage,
+.indicator-circle-stage {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.35s ease;
+}
+
+.indicator-intro-stage {
+    z-index: 2;
+}
+
+.indicator-intro-text {
+    color: #fff;
+    font-size: 38px;
+    letter-spacing: -1.2px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(48px);
+    transition: opacity 0.25s linear, transform 0.25s linear;
+}
+
+.indicator-circle-stage {
+    z-index: 3;
+    opacity: 0;
+}
+
+.indicator-circle-stage .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.indicator-circle {
+    width: min(54vw, 590px);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    isolation: isolate;
+}
+
+.wrapper_fs .indicator-circle::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.indicator-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.6);
+    transition: 0.45s ease;
+    z-index: 5;
+}
+
+.indicator-label {
+    color: #fff;
+    font-size: 21px;
+    font-weight: 300;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.45s ease;
+    z-index: 3;
+}
+
+.indicator-center {
+    width: 60%;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.indicator-center h2 {
+    font-size: 66px;
+    margin-bottom: 40px;
+    color: var(--white-color);
+}
+
+.indicator-center p {
+    color: var(--white-color);
+}
+
+.reveal-step.is-visible {
+    opacity: 1;
+}
+
+.indicator-dot.is-visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.dot-1 { left: 50%; top: 0; }
+.dot-2 { left: 85.36%; top: 14.64%; }
+.dot-3 { left: 100%; top: 50%; }
+.dot-4 { left: 85.36%; top: 85.36%; }
+.dot-5 { left: 50%; top: 100%; }
+.dot-6 { left: 14.64%; top: 85.36%; }
+.dot-7 { left: 0; top: 50%; }
+.dot-8 { left: 14.64%; top: 14.64%; }
+
+.label-1 { left: 50%; top: -58px; transform: translateX(-50%); }
+.label-2 { left: 96%; top: 7%; }
+.label-3 { left: 106%; top: 50%; transform: translateY(-50%); }
+.label-4 { left: 96%; top: 93%; transform: translateY(-100%); }
+.label-5 { left: 50%; top: 110%; transform: translateX(-50%); }
+.label-6 { left: -6%; top: 93%; transform: translateY(-100%); }
+.label-7 { left: -8%; top: 50%; transform: translateY(-50%); }
+.label-8 { left: -12%; top: 7%; }
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+.cards-section {
+    padding: 180px 0;
+}
+
+.season-best {
+    width: 100%;
+    height: 100%;
+    padding-top: 240px;
+    padding-bottom: 120px;
+}
+
+.season-best-title {
+    text-align: right;
+    margin-bottom: 46px;
+}
+
+.season-best-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 0.75fr 0.75fr;
+    gap: 20px;
+    align-items: end;
+}
+
+.season-best-copy {
+    padding-right: 75px;
+    margin-bottom: 190px;
+}
+
+.season-best-heading {
+    margin-bottom: 24px;
+}
+
+.season-best-subtitle {
+    margin-bottom: 42px;
+}
+
+.season-best-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    color: var(--black-color);
+    line-height: 1;
+}
+
+.season-best-more img {
+    width: 24px;
+    height: 24px;
+}
+
+.season-card {
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+}
+
+.season-card a {
+    display: block;
+}
+
+.season-image-frame {
+    display: block;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.season-card img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease;
+    transform-origin: center;
+}
+
+.season-card:hover img {
+    transform: scale(1.08);
+}
+
+.season-card h3 {
+    margin-top: 16px;
+    padding: 0;
+}
+
+.season-card p {
+    margin-top: 8px;
+}
+
+.season-card-lg .season-image-frame {
+    width: 100%;
+    height: 470px;
+}
+
+
+.season-card-md .season-image-frame,
+.season-card-sm .season-image-frame {
+    width: 100%;
+    height: 354px;
+}
+
+.season-card-sm {
+    margin-bottom: 132px;
+}
+
+.season-card-md a,
+.season-card-sm a {
+    position: relative;
+}
+
+
+
+.card-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.card-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card-grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.hover-zoom-card {
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.hover-zoom-card a {
+    display: block;
+}
+
+.hover-zoom-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease;
+    border-radius: 20px;
+}
+
+.hover-zoom-card:hover img {
+    transform: scale(1.08);
+}
+
+.hover-zoom-card h3 {
+    padding: 20px 0 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--black-color);
+}
+
+.season-card-md h3,
+.season-card-sm h3 {
+    position: absolute;
+    right: 24px;
+    bottom: 20px;
+    margin-top: 0;
+    padding: 0;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+    z-index: 2;
+}
+
+.divers-reflections {
+    overflow: hidden;
+}
+
+.reflection-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.reflection-track {
+    display: flex;
+    width: max-content;
+    gap: 20px;
+    animation: reflectionFlow 30s linear infinite;
+}
+
+.reflection-slider:hover .reflection-track {
+    animation-play-state: paused;
+}
+
+.reflection-card {
+    width: 280px;
+    flex: 0 0 280px;
+}
+
+.reflection-review-card {
+    width: 420px;
+    flex: 0 0 420px;
+    min-height: 330px;
+    border-left: 2px solid rgba(32, 62, 181, 0.35);
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--black-color);
+    background-color: transparent;
+}
+
+.reflection-review-text {
+    font-size: 15px;
+    letter-spacing: -0.3px;
+}
+
+.reflection-review-name {
+    margin-top: 24px;
+    font-size: 22px;
+    color: var(--black-color);
+    font-weight: 600;
+}
+
+@keyframes reflectionFlow {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.diving-archive-section {
+    padding-top: 110px;
+    padding-bottom: 120px;
+}
+
+.archive-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+.archive-head .section-title {
+    margin-bottom: 0;
+}
+
+.archive-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(32, 62, 181, 0.35);
+    border-radius: 999px;
+    padding: 10px 18px;
+    color: var(--primary-color);
+    font-size: 19px;
+    line-height: 1;
+}
+
+.archive-more-btn img {
+    width: 14px;
+    height: 14px;
+}
+
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+}
+
+.archive-card {
+    background-color: transparent;
+}
+
+.archive-card a {
+    display: block;
+}
+
+.archive-image-wrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.archive-image-wrap img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease;
+}
+
+.archive-card:hover .archive-image-wrap img {
+    transform: scale(1.06);
+}
+
+
+
+.card-txt-wrap {
+    padding: 0 10px;
+}
+
+.archive-card .card-title {
+    margin-bottom: 8px;
+}
+
+.archive-card .card-title span {
+    font-weight: 400;
+}
+
+.ocean-lower-gradient-wrap {
+    position: relative;
+    isolation: isolate;
+}
+
+.ocean-lower-gradient-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #f2f2f2 0%, #ffffff 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.ocean-lower-gradient-wrap > section {
+    position: relative;
+    z-index: 1;
+}
+
+.marine-highlights-section {
+    padding: 120px 0;
+}
+
+.marine-content {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 120px;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.marine-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 2px;
+}
+
+.marine-tab {
+    border: none;
+    background-color: transparent;
+    color: var(--black-color);
+    font-size: 20px;
+    letter-spacing: -0.6px;
+    padding: 6px 10px;
+    text-align: right;
+    width: 180px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    position: relative;
+}
+
+.marine-tab::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--black-color);
+    transition: width 0.28s ease;
+}
+
+.marine-tab:hover::before {
+    width: 100%;
+}
+
+.marine-tab.is-active {
+    color: var(--black-color);
+    font-weight: 600;
+}
+
+.marine-tab.is-active::before {
+    width: 100%;
+}
+
+.marine-panel {
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: #fff;
+    height: 600px;
+    position: relative;
+}
+
+.marine-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.marine-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.marine-panel-text {
+    position: absolute;
+    left: 105px;
+    top: 105px;
+    width: min(66%, 620px);
+    color: #fff;
+    z-index: 2;
+}
+
+.marine-panel-text h3 {
+    font-size: 38px;
+    color: #fff;
+    margin-bottom: 22px;
+}
+
+.marine-meta {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.marine-meta li {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 18px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.marine-meta li:last-child {
+    margin-bottom: 0;
+}
+
+.marine-meta span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    padding: 0 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #16398f;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.marine-meta p {
+    color: #fff;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.marine-panel-text p {
+    font-size: 19px;
+    color: #fff;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+}
+
+.biby-promotions {
+    padding-bottom: 120px;
+}
+
+.biby-promotions .container {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.biby-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 520px);
+    grid-template-rows: repeat(2, 320px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.biby-card {
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 8px 18px rgba(12, 28, 80, 0.1);
+}
+
+.biby-card-featured {
+    grid-row: span 2;
+}
+
+.biby-card a {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    height: 100%;
+}
+
+.biby-image-frame {
+    display: block;
+    overflow: hidden;
+}
+
+.biby-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease;
+}
+
+.biby-card:hover .biby-image-frame img {
+    transform: scale(1.08);
+}
+
+.biby-card-text {
+    padding: 15px 55px 20px 35px;
+}
+
+.biby-card-text h3 {
+    font-size: 20px;
+    line-height: 1.6;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.biby-card-text:first-of-type h3 {
+    font-size: 22px;
+}
+
+.biby-card-text p {
+    font-size: 16px;
+    color: var(--black-color);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.biby-card-text span {
+    font-size: 14px;
+    color: #7b7b7b;
+}
+
+@media (max-width: 1280px) {
+    .indicator-intro-text { font-size: 40px; }
+    .indicator-circle { width: min(60vw, 520px); }
+    .indicator-center h2 { font-size: 54px; }
+    .indicator-center p { font-size: 16px; }
+    .indicator-label { font-size: 17px; }
+    .section-title { font-size: 42px; }
+    .card-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .season-best-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .season-best-copy {
+        grid-column: 1 / -1;
+        margin-bottom: 10px;
+    }
+
+    .season-best-heading {
+        font-size: 42px;
+    }
+
+    .season-best-subtitle {
+        font-size: 18px;
+    }
+
+    .season-card-lg .season-image-frame {
+        height: 400px;
+    }
+
+    .season-card-md {
+        margin-bottom: 0;
+    }
+
+    .season-card-md .season-image-frame,
+    .season-card-sm .season-image-frame {
+        height: 300px;
+    }
+
+    .archive-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .archive-image-wrap img {
+        height: 360px;
+    }
+
+    .biby-promotions .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .biby-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
+        gap: 18px;
+    }
+
+    .biby-card-featured {
+        grid-row: auto;
+    }
+
+    .biby-card a {
+        grid-template-rows: auto auto;
+    }
+
+    .biby-image-frame img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-video-section {
+        height: 62vh;
+    }
+
+    .diving-indicator-section {
+        min-height: 400vh;
+    }
+
+    .indicator-circle {
+        width: min(84vw, 430px);
+    }
+
+    .indicator-sticky {
+        top: 0;
+        height: 100vh;
+    }
+
+    .indicator-label {
+        font-size: 16px;
+    }
+
+    .indicator-center h2 {
+        font-size: 44px;
+        margin-bottom: 14px;
+    }
+
+    .label-1 { left: 50%; top: -44px; transform: translateX(-50%); }
+    .label-2 { left: 93%; top: 8%; }
+    .label-3 { left: 101%; top: 50%; transform: translateY(-50%); }
+    .label-4 { left: 93%; top: 92%; transform: translateY(-100%); }
+    .label-5 { left: 50%; top: 108%; transform: translateX(-50%); }
+    .label-6 { left: -2%; top: 92%; transform: translateY(-100%); }
+    .label-7 { left: -6%; top: 50%; transform: translateY(-50%); }
+    .label-8 { left: -8%; top: 8%; }
+
+    .card-grid-3,
+    .card-grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .biby-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .biby-image-frame img {
+        height: 240px;
+    }
+
+    .biby-card-text h3 {
+        font-size: 16px;
+    }
+
+    .biby-card-text p {
+        font-size: 13px;
+    }
+
+    .biby-card-text span {
+        font-size: 12px;
+    }
+
+    .season-best {
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+
+    .season-best-title {
+        text-align: left;
+        margin-bottom: 24px;
+    }
+
+    .season-best-layout {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .season-best-copy {
+        margin-bottom: 0;
+    }
+
+    .season-best-heading {
+        font-size: 32px;
+        margin-bottom: 14px;
+    }
+
+    .season-best-subtitle {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .season-best-more {
+        font-size: 18px;
+    }
+
+    .season-card-lg .season-image-frame,
+    .season-card-md .season-image-frame,
+    .season-card-sm .season-image-frame {
+        height: 280px;
+    }
+
+    .marine-content {
+        grid-template-columns: 1fr;
+    }
+
+    .archive-head {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 26px;
+    }
+
+    .archive-image-wrap img {
+        height: 250px;
+    }
+
+    .marine-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 14px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .marine-tab {
+        width: auto;
+        font-size: 17px;
+        padding: 4px 8px;
+        text-align: left;
+    }
+
+    .marine-panel {
+        height: 420px;
+    }
+
+    .marine-panel-text {
+        left: 20px;
+        top: 20px;
+        width: calc(100% - 40px);
+    }
+
+    .marine-panel-text h3 {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .marine-meta {
+        padding-bottom: 14px;
+        margin-bottom: 14px;
+    }
+
+    .marine-meta li {
+        grid-template-columns: 88px 1fr;
+        gap: 10px;
+    }
+
+    .marine-meta span {
+        height: 24px;
+        font-size: 12px;
+    }
+
+    .marine-meta p {
+        font-size: 13px;
+    }
+
+    .marine-panel-text p {
+        font-size: 14px;
+    }
+
+    .reflection-review-card {
+        width: 85vw;
+        flex-basis: 85vw;
+        min-height: 210px;
+    }
+
+    .reflection-review-text {
+        font-size: 14px;
+    }
+
+    .reflection-review-name {
+        font-size: 18px;
+        margin-top: 18px;
+    }
+}
