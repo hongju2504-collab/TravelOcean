@@ -1,57 +1,57 @@
-/* footer css  */
+/* footer shared css */
 
-.wave-box {
-    background-color: #09255C;
+.footer {
+    --footer-bg-color: #203EB5;
+    --footer-text-color: var(--white-color);
 }
+
 .waves {
     position: relative;
     width: 100%;
-    height: 15vh;
+    height: clamp(100px, 15vh, 150px);
     margin-top: 20px;
     margin-bottom: -7px;
-    min-height: 100px;
-    max-height: 150px;
 }
 
 .inner-footer {
     width: 100%;
-    background-color: #fff;
+    background-color: var(--footer-bg-color);
     padding-top: 60px;
     padding-bottom: 90px;
 }
 
 .footer-content {
     width: 100%;
-    color: #1B3654;
+    color: var(--footer-text-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .footer-content > div {
-    min-height: 90px;
+    min-height: clamp(70px, 8vh, 90px);
 }
 
 .footer-left h2 a {
     display: block;
-    width: 240px;
-    height: 57px;
-    margin-bottom: 10px;
+    width: clamp(180px, 20vw, 240px);
+    height: clamp(45px, 5vh, 57px);
+    margin-bottom: clamp(5px, 1vw, 10px);
 }
 
 .footer-left h2 a img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
 .footer-left p,
 .footer-right a {
     font-family: 'Noto Sans KR';
-    color: var(--primary-color);
+    color: var(--footer-text-color);
     font-size: 20px;
     font-weight: 400;
     letter-spacing: -1px;
+    line-height: 1.2;
 }
 
 .sns-list {
@@ -80,29 +80,26 @@
     object-fit: contain;
 }
 
-
-/* Animation */
-
-.parallax>use {
+.parallax > use {
     animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
 
-.parallax>use:nth-child(1) {
+.parallax > use:nth-child(1) {
     animation-delay: -2s;
     animation-duration: 7s;
 }
 
-.parallax>use:nth-child(2) {
+.parallax > use:nth-child(2) {
     animation-delay: -3s;
     animation-duration: 10s;
 }
 
-.parallax>use:nth-child(3) {
+.parallax > use:nth-child(3) {
     animation-delay: -4s;
     animation-duration: 13s;
 }
 
-.parallax>use:nth-child(4) {
+.parallax > use:nth-child(4) {
     animation-delay: -5s;
     animation-duration: 20s;
 }
@@ -118,6 +115,9 @@
 }
 
 @media (max-width: 1280px) {
+    .waves {
+        height: clamp(80px, 10vh, 100px);
+    }
     .sns {
         width: 45px;
         height: 45px;
@@ -137,8 +137,8 @@
     }
 
     .footer-left h2 a {
-        width: 200px;
-        height: 48px;
+        width: clamp(200px, 16vw, 250px);
+        height: clamp(40px, 4.5vh, 48px);
     }
 
     .sns {
@@ -155,8 +155,7 @@
 
 @media (max-width: 768px) {
     .waves {
-        height: 40px;
-        min-height: 40px;
+        height: clamp(45px, 5vh, 60px);
     }
 
     .inner-footer {
@@ -164,14 +163,27 @@
         padding-bottom: 52px;
     }
 
+    .footer-left h2 a {
+        width: clamp(160px, 15vw, 180px);
+        height: clamp(35px, 4vh, 41px);
+    }
+
     .footer-content {
         flex-direction: column;
         align-items: flex-start;
-        gap: 24px;
+        gap: clamp(6px, 1vw, 8px);
     }
 
     .footer-content > div {
         min-height: auto;
+    }
+    .footer-left {
+        width: 100%;
+    }
+    .footer-left h2 a,
+    .footer-right a {
+        display: block;
+        margin-bottom: clamp(12px, 2vw, 18px);
     }
 
     .footer-right {
@@ -180,7 +192,7 @@
 
     .sns-list {
         justify-content: flex-start;
-        margin-top: 8px;
+        padding-top: clamp(6px, 1vw, 8px);
     }
 
     .sns {
@@ -196,14 +208,18 @@
 }
 
 @media (max-width: 402px) {
+    .waves {
+        height: clamp(35px, 3.7vh, 40px);
+    }
+
     .inner-footer {
         padding-top: 32px;
         padding-bottom: 40px;
     }
 
     .footer-left h2 a {
-        width: 170px;
-        height: 41px;
+        width: clamp(140px, 15vw, 170px);
+        height: clamp(30px, 4vh, 35px);
     }
 
     .sns {
