@@ -182,9 +182,9 @@ body {
     padding: 180px 0;
 }
 
+/* Season's Best — 1281px 이상: 기존 4열(카피+카드3) · 1280px 이하: 컴팩트 헤더 + 3열 카드 */
 .season-best {
     width: 100%;
-    height: 100%;
     padding-top: 240px;
     padding-bottom: 120px;
 }
@@ -208,6 +208,7 @@ body {
 
 .season-best-heading {
     margin-bottom: 24px;
+    color: var(--black-color);
 }
 
 .season-best-subtitle {
@@ -226,6 +227,10 @@ body {
 .season-best-more img {
     width: 24px;
     height: 24px;
+}
+
+.season-best .hover-zoom-card img {
+    aspect-ratio: auto;
 }
 
 .season-card {
@@ -260,12 +265,7 @@ body {
 }
 
 .season-card h3 {
-    margin-top: 16px;
     padding: 0;
-}
-
-.season-card p {
-    margin-top: 8px;
 }
 
 .season-card-lg .season-image-frame {
@@ -278,6 +278,7 @@ body {
 .season-card-sm .season-image-frame {
     width: 100%;
     height: 354px;
+    position: relative;
 }
 
 .season-card-sm {
@@ -287,6 +288,16 @@ body {
 .season-card-md a,
 .season-card-sm a {
     position: relative;
+}
+
+.season-card-lg h3.card-title {
+    padding-top: 18px;
+    color: var(--black-color);
+    line-height: 160%;
+}
+
+.season-card-lg .desc {
+    margin-top: 6px;
 }
 
 
@@ -345,6 +356,10 @@ body {
     z-index: 2;
 }
 
+.season-best .hover-zoom-card h3.card-title {
+    font-size: inherit;
+}
+
 .divers-reflections {
     overflow: hidden;
 }
@@ -392,7 +407,7 @@ body {
     margin-top: 24px;
     font-size: 22px;
     color: var(--black-color);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 @keyframes reflectionFlow {
@@ -401,8 +416,8 @@ body {
 }
 
 .diving-archive-section {
-    padding-top: 110px;
-    padding-bottom: 120px;
+    padding-top: 180px;
+    padding-bottom: 280px;
 }
 
 .archive-head {
@@ -473,7 +488,7 @@ body {
 }
 
 .archive-card .card-title {
-    margin-bottom: 8px;
+    margin-bottom: 2px;
 }
 
 .archive-card .card-title span {
@@ -500,7 +515,7 @@ body {
 }
 
 .marine-highlights-section {
-    padding: 120px 0;
+    padding: 140px 0;
 }
 
 .marine-content {
@@ -536,7 +551,7 @@ body {
 .marine-tab::before {
     content: '';
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
     width: 0;
     height: 2px;
@@ -642,19 +657,16 @@ body {
 
 .biby-promotions {
     padding-bottom: 120px;
-}
-
-.biby-promotions .container {
-    padding-left: 40px;
-    padding-right: 40px;
+    overflow-x: clip;
 }
 
 .biby-grid {
     display: grid;
-    grid-template-columns: repeat(3, 520px);
-    grid-template-rows: repeat(2, 320px);
-    gap: 20px;
-    justify-content: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(min(200px, 28vw), 1fr));
+    gap: clamp(12px, 2vw, 20px);
+    width: 100%;
+    max-width: 100%;
 }
 
 .biby-card {
@@ -662,6 +674,8 @@ body {
     overflow: hidden;
     background-color: #fff;
     box-shadow: 0 8px 18px rgba(12, 28, 80, 0.1);
+    min-width: 0;
+    min-height: 0;
 }
 
 .biby-card-featured {
@@ -670,13 +684,16 @@ body {
 
 .biby-card a {
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: minmax(0, 1fr) auto;
     height: 100%;
+    min-height: 0;
 }
 
 .biby-image-frame {
     display: block;
     overflow: hidden;
+    min-height: 0;
+    height: 100%;
 }
 
 .biby-image-frame img {
@@ -685,6 +702,7 @@ body {
     object-fit: cover;
     display: block;
     transition: transform 0.45s ease;
+    aspect-ratio: 2 / 1;
 }
 
 .biby-card:hover .biby-image-frame img {
@@ -692,24 +710,29 @@ body {
 }
 
 .biby-card-text {
-    padding: 15px 55px 20px 35px;
+    padding: clamp(12px, 2vw, 15px) clamp(14px, 3.5vw, 55px) clamp(14px, 2vw, 20px) clamp(14px, 2.5vw, 35px);
+    min-width: 0;
 }
 
-.biby-card-text h3 {
-    font-size: 20px;
-    line-height: 1.6;
+.biby-card-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    word-break: keep-all;
     white-space: nowrap;
     text-overflow: ellipsis;
-}
-.biby-card-text:first-of-type h3 {
-    font-size: 22px;
+    overflow: hidden;
 }
 
 .biby-card-text p {
-    font-size: 16px;
     color: var(--black-color);
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    word-break: keep-all;
 }
 
 .biby-card-text span {
@@ -723,38 +746,120 @@ body {
     .indicator-center h2 { font-size: 54px; }
     .indicator-center p { font-size: 16px; }
     .indicator-label { font-size: 17px; }
-    .section-title { font-size: 42px; }
+    .section-title:not(.en-title) {
+        font-size: 42px;
+    }
     .card-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
+    /* Season's Best — 1280px 이하: 좌 카피 / 우 Season's Best + View More, 카드 3열 스태거 */
+    .season-best {
+        padding-top: clamp(100px, 12vw, 200px);
+        padding-bottom: clamp(72px, 8vw, 120px);
+    }
+
+    .season-best .container {
+        display: grid;
+        grid-template-columns: 1.12fr 0.9fr 0.9fr;
+        column-gap: clamp(16px, 2vw, 24px);
+        row-gap: 18px;
+        align-items: start;
+    }
+
     .season-best-layout {
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
+        display: contents;
     }
 
     .season-best-copy {
-        grid-column: 1 / -1;
-        margin-bottom: 10px;
+        display: contents;
+    }
+
+    .season-best-title {
+        grid-column: 2 / 4;
+        grid-row: 1;
+        margin: 0;
+        text-align: right;
+        line-height: 1;
     }
 
     .season-best-heading {
-        font-size: 42px;
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0;
+        color: var(--primary-color);
     }
 
     .season-best-subtitle {
-        font-size: 18px;
+        grid-column: 1;
+        grid-row: 2;
+        margin: 0;
     }
 
-    .season-card-lg .season-image-frame {
-        height: 400px;
+    .season-best-more {
+        grid-column: 2 / 4;
+        grid-row: 2;
+        justify-self: end;
+        align-self: end;
+        border: 1px solid var(--primary-color);
+        border-radius: 50px;
+        padding: 10px 28px;
+        color: var(--primary-color);
+        font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        letter-spacing: -1px;
+        line-height: 1;
+    }
+
+    .season-best-more img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+    }
+
+    .season-card-lg {
+        grid-column: 1;
+        grid-row: 3;
     }
 
     .season-card-md {
+        grid-column: 2;
+        grid-row: 3;
+        margin-top: clamp(40px, 6vw, 96px);
+    }
+
+    .season-card-sm {
+        grid-column: 3;
+        grid-row: 3;
+        margin-top: clamp(0px, 1.5vw, 20px);
         margin-bottom: 0;
+    }
+
+    .season-card-lg .season-image-frame {
+        height: min(52vw, 400px);
     }
 
     .season-card-md .season-image-frame,
     .season-card-sm .season-image-frame {
-        height: 300px;
+        height: min(42vw, 300px);
+    }
+
+    .season-card-md .season-image-frame::after,
+    .season-card-sm .season-image-frame::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 18px;
+        background: linear-gradient(to top, rgba(9, 29, 83, 0.72) 0%, rgba(9, 29, 83, 0.12) 45%, transparent 72%);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .season-card-lg h3.card-title {
+        color: var(--primary-color);
+    }
+
+    .season-card-lg .desc {
+        color: rgba(9, 29, 83, 0.62);
     }
 
     .archive-grid {
@@ -766,11 +871,6 @@ body {
         height: 360px;
     }
 
-    .biby-promotions .container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
     .biby-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: auto;
@@ -778,6 +878,7 @@ body {
     }
 
     .biby-card-featured {
+        grid-column: auto / span 2;
         grid-row: auto;
     }
 
@@ -785,8 +886,74 @@ body {
         grid-template-rows: auto auto;
     }
 
+    .biby-image-frame {
+        height: auto;
+    }
+
     .biby-image-frame img {
-        height: 300px;
+        height: auto;
+        max-height: min(180px, 52vw);
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+    }
+
+    .biby-card-featured .biby-image-frame img {
+        max-height: min(280px, 52vw);
+    }
+}
+
+@media (max-width: 1024px) {
+    .season-best .container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .season-best-title {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        text-align: left;
+    }
+
+    .season-best-heading {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    .season-best-subtitle {
+        grid-column: 1 / -1;
+        grid-row: 3;
+    }
+
+    .season-best-more {
+        grid-column: 1 / -1;
+        grid-row: 4;
+        justify-self: start;
+        align-self: start;
+    }
+
+    .season-card-lg {
+        grid-column: 1 / -1;
+        grid-row: 5;
+    }
+
+    .season-card-md {
+        grid-column: 1;
+        grid-row: 6;
+        margin-top: 0;
+    }
+
+    .season-card-sm {
+        grid-column: 2;
+        grid-row: 6;
+        margin-top: 0;
+    }
+
+    .season-card-lg .season-image-frame {
+        height: min(48vw, 380px);
+    }
+
+    .season-card-md .season-image-frame,
+    .season-card-sm .season-image-frame {
+        height: min(40vw, 300px);
     }
 }
 
@@ -836,16 +1003,27 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .biby-grid {
-        grid-template-columns: 1fr;
+    .biby-image-frame {
+        height: auto;
     }
 
+    .biby-card-featured .biby-image-frame img {
+        height: auto;
+        max-height: min(200px, 52vw);
+        aspect-ratio: 2 / 1;
+        object-fit: cover;
+    }
     .biby-image-frame img {
-        height: 240px;
+        height: auto;
+        max-height: min(120px, 52vw);
+        aspect-ratio: 2 / 1;
+        object-fit: cover;
     }
 
     .biby-card-text h3 {
         font-size: 16px;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
     }
 
     .biby-card-text p {
@@ -857,42 +1035,64 @@ body {
     }
 
     .season-best {
-        padding-top: 100px;
-        padding-bottom: 70px;
+        padding-top: 80px;
+        padding-bottom: 64px;
+    }
+
+    .season-best .container {
+        grid-template-columns: 1fr;
+        row-gap: 16px;
     }
 
     .season-best-title {
+        grid-column: 1;
+        grid-row: 1;
         text-align: left;
-        margin-bottom: 24px;
-    }
-
-    .season-best-layout {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .season-best-copy {
-        margin-bottom: 0;
     }
 
     .season-best-heading {
-        font-size: 32px;
-        margin-bottom: 14px;
+        grid-column: 1;
+        grid-row: 2;
     }
 
     .season-best-subtitle {
-        font-size: 15px;
-        margin-bottom: 20px;
+        grid-column: 1;
+        grid-row: 3;
     }
 
     .season-best-more {
+        grid-column: 1;
+        grid-row: 4;
+        justify-self: start;
         font-size: 18px;
+        padding: 8px 22px;
+    }
+
+    .season-card-lg {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    .season-card-md {
+        grid-column: 1;
+        grid-row: 6;
+    }
+
+    .season-card-sm {
+        grid-column: 1;
+        grid-row: 7;
+    }
+
+    .season-card-md,
+    .season-card-sm {
+        margin-top: 0;
     }
 
     .season-card-lg .season-image-frame,
     .season-card-md .season-image-frame,
     .season-card-sm .season-image-frame {
-        height: 280px;
+        height: min(52vw, 280px);
+        min-height: 220px;
     }
 
     .marine-content {
@@ -976,5 +1176,84 @@ body {
     .reflection-review-name {
         font-size: 18px;
         margin-top: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .biby-promotions {
+        padding-bottom: 80px;
+        overflow-x: visible;
+    }
+
+    .biby-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        gap: 14px;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 16px;
+        padding: 10px 16px 22px;
+        box-sizing: border-box;
+    }
+
+    .biby-card {
+        flex: 0 0 min(78vw, 260px);
+        width: min(78vw, 260px);
+        min-width: min(78vw, 260px);
+        max-width: min(78vw, 260px);
+        scroll-snap-align: start;
+        box-shadow:
+            0 1px 2px rgba(12, 28, 80, 0.05),
+            0 6px 20px rgba(12, 28, 80, 0.07);
+        border: 1px solid rgba(12, 28, 80, 0.06);
+    }
+
+    .biby-card-featured {
+        grid-row: auto;
+        grid-column: auto;
+    }
+
+    .biby-card a {
+        display: grid;
+        grid-template-rows: auto auto;
+        height: 100%;
+        min-height: 0;
+    }
+
+    .biby-image-frame {
+        height: auto;
+    }
+
+    .biby-image-frame img,
+    .biby-card-featured .biby-image-frame img {
+        height: auto;
+        max-height: min(180px, 34vw);
+        aspect-ratio: 10 / 16;
+        object-fit: cover;
+    }
+
+    .biby-card-text {
+        padding: 10px 12px 12px;
+    }
+
+    .biby-card-title {
+        white-space: normal;
+        text-overflow: unset;
+    }
+
+    .biby-card-text p {
+        display: none; 
     }
 }

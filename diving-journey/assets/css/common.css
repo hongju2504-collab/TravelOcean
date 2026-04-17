@@ -103,6 +103,97 @@ body {
     object-fit: cover;
 }
 
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1160px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .en-title {
+        font-size: 72px;
+    }
+    
+    .title {
+        font-size: 32px;
+    }
+    
+    .subtitle,
+    .card-title {
+        font-size: 20px;
+    }
+    
+    .desc {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 984px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .en-title {
+        font-size: 60px;
+    }
+    
+    .title {
+        font-size: 26px;
+    }
+    
+    .subtitle,
+    .card-title {
+        font-size: 18px;
+    }
+    
+    .desc {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 728px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .en-title {
+        font-size: 48px;
+    }
+    
+    .title {
+        font-size: 22px;
+    }
+    
+    .subtitle,
+    .card-title {
+        font-size: 16px;
+    }
+    
+    .desc {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 402px) {
+    .container {
+        max-width: 382px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .en-title {
+        font-size: 32px;
+    }
+    
+    .title {
+        font-size: 20px;
+    }
+}
+
 
 
 /* breakpoints on off  */
