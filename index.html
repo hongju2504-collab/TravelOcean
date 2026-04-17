@@ -12,20 +12,78 @@
     
     <header class="header container">
         <h1 class="logo">
-            <a href="#">
+            <a href="./index.html">
                 <img src="./assets/images/logo-w.png" alt="logo">
             </a>
         </h1>
         <div class="menu-bar">
-            <a href="#" class="menu-btn">
-                menu
-                <img src="./assets/images/menu-arrow.png" alt="arrow">
-            </a>
-            <a href="#" class="mute">
-                <img src="./assets/images/mute.png" alt="mute">
+            <div class="menu-bar-wrap">
+                <a href="#" class="menu-btn">
+                    menu
+                    <img src="./assets/images/menu-arrow.png" alt="arrow">
+                </a>
+                <a href="#" class="mute">
+                    <img src="./assets/images/mute.png" alt="mute">
+                </a>
+            </div>
+            <a href="#" class="menu-bar-mo">
+                <img src="./assets/images/menu-alt-2.png" alt="menu">
             </a>
         </div>
     </header>
+
+    <nav class="global-menu" aria-hidden="true">
+        <div class="global-menu-inner">
+            <ul class="global-menu-list">
+                <li class="menu-item">
+                    <a href="./Bluebuddy/index.html">
+                        <span class="menu-num">01</span>
+                        <span class="menu-label">Blue Buddy</span>
+                    </a>
+                </li>
+                <li class="menu-item has-submenu">
+                    <button type="button" class="submenu-toggle" aria-expanded="false">
+                        <span class="menu-left">
+                            <span class="menu-num">02</span>
+                            <span class="menu-label">About Diving</span>
+                        </span>
+                        <span class="submenu-arrow-wrap" aria-hidden="true">
+                            <img class="submenu-arrow submenu-arrow-blue" src="./assets/images/menu-arrow-b.png" alt="submenu arrow">
+                            <img class="submenu-arrow submenu-arrow-white" src="./assets/images/menu-arrow.png" alt="submenu arrow">
+                        </span>
+                    </button>
+                    <ul class="submenu-list">
+                        <li><a href="./about-diving/index.html#scuba-diving">Scuba Diving</a></li>
+                        <li><a href="./about-diving/index.html#free-diving">Free Diving</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="./diving-journey/index.html">
+                        <span class="menu-num">03</span>
+                        <span class="menu-label">Diving Journey</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="./community/index.html">
+                        <span class="menu-num">04</span>
+                        <span class="menu-label">Community</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="global-menu-sns">
+                <li>
+                    <a href="#" aria-label="facebook">
+                        <img src="./assets/images/sns-facebook.png" alt="facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="instagram">
+                        <img src="./assets/images/sns-instagram.png" alt="instagram">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
 
 
@@ -78,7 +136,6 @@
     </div>
 
 
-    <!-- <script src="./assets/js/jquery.min.js"></script>
-    <script src="./assets/js/script.js"></script> -->
+    <script src="./assets/js/menu.js"></script>
 </body>
 </html>
