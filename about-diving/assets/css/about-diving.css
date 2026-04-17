@@ -1,0 +1,470 @@
+@import 'common.css';
+@import 'footer-w.css';
+
+body {
+    line-height: 1.6;
+    font-family: 'Noto Sans KR';
+    color: var(--black-color);
+}
+
+.inner {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+/* header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 120;
+}
+
+/* hero section */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../images/bg.png") no-repeat center/cover;
+    display: flex;
+    align-items: center;
+}
+
+.hero-inner {
+    margin-left: 120px;
+    margin-right: 120px;
+    color: #ffffff;
+}
+
+/* 타이틀 */
+.hero h1 {
+    font-size: 72px;
+    font-weight: 500;
+    /* Medium */
+    line-height: 1;
+    margin-bottom: 24px;
+}
+
+/* 서브 타이틀 */
+.sub-title {
+    font-size: 24px;
+    font-weight: 400;
+    /* Regular */
+    line-height: 1.6;
+    margin-bottom: 80px;
+}
+
+/* 설명 텍스트 */
+.description {
+    font-size: 24px;
+    font-weight: 300;
+    /* DemiLight */
+    line-height: 1.6;
+}
+
+/* Find Your Blue */
+.find-blue {
+    padding: 200px 0;
+}
+
+/* 전체 구조 */
+.find-blue-inner {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* 좌측 (고정 타이틀) */
+.find-blue-left {
+    width: 40%;
+    position: sticky;
+    top: 120px;
+    /* 상단 여백 기준 */
+}
+
+.find-blue-left h2 {
+    font-size: 72px;
+    font-weight: 500;
+    color: #1a3faa;
+}
+
+/* 우측 콘텐츠 */
+.find-blue-right {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* 텍스트 영역 */
+.find-blue-text {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* 메인 질문 */
+.main-text {
+    padding-top: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* 설명 */
+.sub-text {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* 가이드 */
+.guide-text {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* 카드 */
+.card {
+    display: block;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-title {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* Into the Blue */
+.into-blue {
+    padding: 200px 0;
+}
+
+/* 구조 */
+.into-blue-inner {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* 좌측 고정 */
+.into-blue-left {
+    width: 40%;
+    position: sticky;
+    top: 120px;
+}
+
+.into-blue-left h2 {
+    font-size: 72px;
+    font-weight: 500;
+    color: #1a3faa;
+}
+
+/* 우측 */
+.into-blue-right {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* 텍스트 */
+.into-blue-text {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.into-blue-text .main-text {
+    padding-top: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.into-blue-text .sub-text {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.into-blue-text .guide-text {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* 카드 */
+.blue-card img {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+/* 카드 타이틀 */
+.blue-card h3 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+/* 카드 설명 */
+.blue-card p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* UnderWater Adventure */
+.underwater {
+    padding: 200px 0;
+}
+
+/* 구조 */
+.underwater-inner {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* 좌측 고정 */
+.underwater-left {
+    width: 40%;
+    position: sticky;
+    top: 120px;
+}
+
+.underwater-left h2 {
+    font-size: 72px;
+    font-weight: 500;
+    color: #1a3faa;
+}
+
+/* 우측 텍스트 */
+.underwater-right {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+}
+
+/* 메인 */
+.underwater-right .main-text {
+    padding-top: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 80px;
+}
+
+/* 일반 텍스트 */
+.underwater-right .sub-text {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* 강조 텍스트 */
+.underwater-right .highlight-text {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* 배경 */
+.attractions {
+    padding: 200px 0;
+    background: url("../images/bg.png") no-repeat center/cover;
+}
+
+/* 헤더 */
+.attractions-header {
+    margin-bottom: 100px;
+}
+
+.attractions-header h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 72px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.attractions-header p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+/* 슬라이더 */
+.attractions-slider {
+    display: flex;
+    gap: 50px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+}
+
+.attractions-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* 카드 */
+.attraction-card {
+    width: 480px;
+    height: 572px;
+    flex: 0 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 이미지 */
+.attraction-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* 타이틀 */
+.attraction-card h3 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+/* 설명 */
+.attraction-card p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* 반응형 */
+@media (max-width: 1280px) {
+
+  /* 공통 inner */
+  .inner {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  /* HERO */
+  .hero h1 {
+    font-size: 56px;
+  }
+
+  .sub-title {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  /* 공통 섹션 패딩 */
+  .find-blue,
+  .into-blue,
+  .underwater,
+  .attractions {
+    padding: 140px 0;
+  }
+
+  /* 좌측 타이틀 */
+  .find-blue-left h2,
+  .into-blue-left h2,
+  .underwater-left h2 {
+    font-size: 56px;
+  }
+
+  /* 질문 (42 → 축소) */
+  .main-text {
+    font-size: 32px;
+  }
+
+  /* 설명 텍스트 */
+  .sub-text,
+  .guide-text {
+    font-size: 20px;
+  }
+
+  /* 카드 간격 */
+  .find-blue-right,
+  .into-blue-right {
+    gap: 32px;
+  }
+
+  /* 이미지 카드 */
+  .card {
+    border-radius: 12px;
+  }
+
+  /* Into Blue 카드 */
+  .blue-card h3 {
+    font-size: 20px;
+  }
+
+  .blue-card p {
+    font-size: 16px;
+  }
+
+  /* Attraction 헤더 */
+  .attractions-header h2 {
+    font-size: 56px;
+  }
+
+  .attractions-header p {
+    font-size: 22px;
+  }
+
+  /* Attraction 카드 */
+  .attraction-card {
+    width: 380px;
+    height: 520px;
+    padding: 20px;
+  }
+
+  .attraction-card h3 {
+    font-size: 24px;
+  }
+
+  .attraction-card p {
+    font-size: 16px;
+  }
+
+  /* 카드 간격 */
+  .attractions-slider {
+    gap: 32px;
+  }
+}
