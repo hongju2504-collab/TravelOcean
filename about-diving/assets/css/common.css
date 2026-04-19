@@ -300,6 +300,9 @@ body {
         width: 22px;
         height: 22px;
     }
+    .btn-border {
+        padding: 6px 25px;
+    }
     .btn-border img {
         width: 13px;
         height: 26px;
@@ -314,6 +317,9 @@ body {
         width: 20px;
         height: 20px;
     }
+    .btn-border {
+        padding: 6px 20px;
+    }
     .btn-border img {
         width: 12px;
         height: 24px;
@@ -327,6 +333,9 @@ body {
     .btn img {
         width: 18px;
         height: 18px;
+    }
+    .btn-border {
+        padding: 5px 12px;
     }
     .btn-border img {
         width: 10px;
@@ -456,6 +465,24 @@ body {
     font-size: 16px;
     color: var(--black-color);
     line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .archive-badges {
+        left: 20px;
+        top: 18px;
+    }
+    .archive-badge {
+        font-size: 14px;
+        padding: 6px 16px 8px 16px;
+    }
+}
+
+@media (max-width: 402px) {
+    .archive-badge {
+        font-size: 13px;
+        padding: 4px 16px 6px 16px;
+    }
 }
 
 /* global menu */
