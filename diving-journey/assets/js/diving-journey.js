@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 marineImage.src = tab.dataset.image || '';
             }
             if (marineTitle) {
-                marineTitle.textContent = tab.dataset.title || '';
+                marineTitle.innerHTML = tab.dataset.title || '';
             }
             if (marineVisibility) {
                 marineVisibility.textContent = tab.dataset.visibility || '';
