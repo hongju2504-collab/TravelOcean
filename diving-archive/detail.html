@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article — The Diving Archive</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/reset/reset.min.css">
+    <link rel="stylesheet" href="../assets/css/common/footer-b.css">
+    <link rel="stylesheet" href="../Bluebuddy/css/font.css">
+    <link rel="stylesheet" href="../Bluebuddy/css/common.css">
+    <link rel="stylesheet" href="assets/css/diving-archive.css">
+</head>
+<body class="diving-archive-page diving-archive-detail-page">
+
+    <header class="header container">
+        <h1 class="logo">
+            <a href="../index.html">
+                <img src="../assets/images/logo-w.png" alt="logo">
+            </a>
+        </h1>
+        <div class="menu-bar">
+            <div class="menu-bar-wrap">
+                <a href="#" class="menu-btn">
+                    menu
+                    <img src="../assets/images/menu-arrow.png" alt="arrow">
+                </a>
+                <a href="#" class="mute">
+                    <img src="../assets/images/mute.png" alt="mute">
+                </a>
+            </div>
+            <a href="#" class="menu-bar-mo">
+                <img src="../assets/images/menu-alt-2.png" alt="menu">
+            </a>
+        </div>
+    </header>
+
+    <nav class="global-menu" aria-hidden="true">
+        <div class="global-menu-inner">
+            <ul class="global-menu-list">
+                <li class="menu-item">
+                    <a href="../Bluebuddy/index.html">
+                        <span class="menu-num">01</span>
+                        <span class="menu-label">Blue Buddy</span>
+                    </a>
+                </li>
+                <li class="menu-item has-submenu">
+                    <button type="button" class="submenu-toggle" aria-expanded="false">
+                        <span class="menu-left">
+                            <span class="menu-num">02</span>
+                            <span class="menu-label">About Diving</span>
+                        </span>
+                        <span class="submenu-arrow-wrap" aria-hidden="true">
+                            <img class="submenu-arrow submenu-arrow-blue" src="../assets/images/menu-arrow-b.png" alt="">
+                            <img class="submenu-arrow submenu-arrow-white" src="../assets/images/menu-arrow.png" alt="">
+                        </span>
+                    </button>
+                    <ul class="submenu-list">
+                        <li><a href="../about-diving/index.html#scuba-diving">Scuba Diving</a></li>
+                        <li><a href="../about-diving/index.html#free-diving">Free Diving</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="../diving-journey/index.html">
+                        <span class="menu-num">03</span>
+                        <span class="menu-label">Diving Journey</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="../community/index.html">
+                        <span class="menu-num">04</span>
+                        <span class="menu-label">Community</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="global-menu-sns">
+                <li>
+                    <a href="#" aria-label="facebook">
+                        <img src="../assets/images/sns-facebook.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="instagram">
+                        <img src="../assets/images/sns-instagram.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="archive-page-gradient-wrap archive-detail-gradient">
+        <main class="archive-detail-main">
+            <article class="detail-article container" id="detail-root">
+                <p class="detail-back">
+                    <a class="desc" href="index.html">← The Diving Archive</a>
+                </p>
+                <figure class="detail-figure">
+                    <img id="detail-img" src="" alt="">
+                </figure>
+                <div class="detail-badge-row" id="detail-badges"></div>
+                <h1 class="title detail-h1" id="detail-title"></h1>
+                <p class="subtitle detail-lead" id="detail-excerpt"></p>
+                <div class="detail-body desc" id="detail-body"></div>
+                <p class="detail-missing desc" id="detail-missing" hidden>요청하신 글을 찾을 수 없습니다.</p>
+            </article>
+        </main>
+    </div>
+
+    <div class="footer">
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgb(32, 62, 181,0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgb(32, 62, 181,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgb(32, 62, 181,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#203EB5" />
+                </g>
+            </svg>
+        </div>
+        <div class="inner-footer">
+            <div class="footer-content container">
+                <div class="footer-left">
+                    <h2>
+                        <a href="../index.html">
+                            <img src="../assets/images/logo-txt-w.png" alt="footer-logo">
+                        </a>
+                    </h2>
+                    <p class="copyright">ⓒ Copyright by JinGanJang</p>
+                </div>
+                <div class="footer-right">
+                    <a href="#">JinGanJang@example.site</a>
+                    <ul class="sns-list">
+                        <li class="sns">
+                            <a href="#">
+                                <img src="../assets/images/sns-facebook-w.png" alt="facebook">
+                            </a>
+                        </li>
+                        <li class="sns">
+                            <a href="#">
+                                <img src="../assets/images/sns-instagram-w.png" alt="instagram">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/diving-archive-data.js"></script>
+    <script src="assets/js/diving-archive-detail.js"></script>
+    <script src="../assets/js/menu.js"></script>
+</body>
+</html>
