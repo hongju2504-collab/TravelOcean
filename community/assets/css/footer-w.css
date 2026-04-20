@@ -29,7 +29,7 @@
 }
 
 .footer-content > div {
-    min-height: 90px;
+    height: 90px;
 }
 
 .footer-left h2 a {
@@ -60,24 +60,11 @@
     display: flex;
     gap: 10px;
     justify-content: end;
-    align-items: center;
-    height: auto;
+    height: 55px;
 }
 
 .sns a {
     display: block;
-}
-
-.sns {
-    width: 55px;
-    height: 55px;
-    flex: 0 0 55px;
-}
-
-.sns img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
 }
 
 
@@ -117,103 +104,18 @@
     }
 }
 
-@media (max-width: 1280px) {
-    .sns {
-        width: 45px;
-        height: 45px;
-        flex-basis: 45px;
-    }
-
-    .footer-left p,
-    .footer-right a {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .inner-footer {
-        padding-top: 48px;
-        padding-bottom: 72px;
-    }
-
-    .footer-left h2 a {
-        width: 200px;
-        height: 48px;
-    }
-
-    .sns {
-        width: 35px;
-        height: 35px;
-        flex-basis: 35px;
-    }
-
-    .footer-left p,
-    .footer-right a {
-        font-size: 16px;
-    }
-}
-
+/*Shrinking for mobile*/
 @media (max-width: 768px) {
     .waves {
         height: 40px;
         min-height: 40px;
     }
 
-    .inner-footer {
-        padding-top: 40px;
-        padding-bottom: 52px;
+    .content {
+        height: 30vh;
     }
 
-    .footer-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
-    }
-
-    .footer-content > div {
-        min-height: auto;
-    }
-
-    .footer-right {
-        width: 100%;
-    }
-
-    .sns-list {
-        justify-content: flex-start;
-        margin-top: 8px;
-    }
-
-    .sns {
-        width: 25px;
-        height: 25px;
-        flex-basis: 25px;
-    }
-
-    .footer-left p,
-    .footer-right a {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 402px) {
-    .inner-footer {
-        padding-top: 32px;
-        padding-bottom: 40px;
-    }
-
-    .footer-left h2 a {
-        width: 170px;
-        height: 41px;
-    }
-
-    .sns {
-        width: 22px;
-        height: 22px;
-        flex-basis: 22px;
-    }
-
-    .footer-left p,
-    .footer-right a {
-        font-size: 13px;
+    h1 {
+        font-size: 24px;
     }
 }
