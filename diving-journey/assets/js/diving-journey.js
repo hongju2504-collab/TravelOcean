@@ -44,9 +44,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateIndicatorProgress() {
-        if (!indicatorSection || revealLabels.length === 0 || revealDots.length === 0 || !introStage || !introText || !circleStage) {
+        if (!indicatorSection || !introStage || !introText) {
             return;
         }
+
+        const hasCircleStage =
+            circleStage &&
+            revealLabels.length > 0 &&
+            revealDots.length > 0;
 
         const rect = indicatorSection.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
@@ -54,6 +59,39 @@ document.addEventListener('DOMContentLoaded', function () {
         const scrolled = Math.min(Math.max(-rect.top, 0), totalScrollable);
         const progress = totalScrollable <= 0 ? 0 : scrolled / totalScrollable;
         const introEnd = 0.7;
+
+        function applyIntroOnlyAnimation() {
+            if (progress < introEnd) {
+                const introProgress = progress / introEnd;
+                const fadeInEnd = 0.55;
+
+                let opacity;
+                let translateY;
+
+                if (introProgress <= fadeInEnd) {
+                    const ratio = introProgress / fadeInEnd;
+                    opacity = ratio;
+                    translateY = 48 - (48 * ratio);
+                } else {
+                    const ratio = (introProgress - fadeInEnd) / (1 - fadeInEnd);
+                    opacity = 1 - ratio;
+                    translateY = -(52 * ratio);
+                }
+
+                introStage.style.opacity = '1';
+                introText.style.opacity = String(Math.max(0, Math.min(1, opacity)));
+                introText.style.transform = 'translateY(' + translateY.toFixed(1) + 'px)';
+            } else {
+                introStage.style.opacity = '0';
+                introText.style.opacity = '0';
+                introText.style.transform = 'translateY(-52px)';
+            }
+        }
+
+        if (!hasCircleStage) {
+            applyIntroOnlyAnimation();
+            return;
+        }
 
         let visibleCount = 0;
 

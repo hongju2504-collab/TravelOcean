@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlueBuddy</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../assets/css/reset/reset.min.css">
     <link rel="stylesheet" href="./assets/css/common.css">
     <link rel="stylesheet" href="./assets/css/diving-journey.css">
@@ -90,9 +94,19 @@
     <main class="diving-journey-main">
         <section class="hero-video-section">
             <video src="./assets/images/hero-video.mov" autoplay muted loop playsinline></video>
+            <div class="hero-video-content">
+                <div class="hero-brand">
+                    <img src="./assets/images/logo-txt-w.png" alt="BlueBuddy Diving Community" class="hero-brand-logo">
+                </div>
+                <a href="#scroll-next" class="hero-scroll-wrap" aria-label="다음 섹션으로 스크롤">
+                    <span class="hero-scroll-hint">
+                        <img src="../assets/images/pajamas_scroll-up.png" alt="" class="hero-scroll-icon">
+                    </span>
+                </a>
+            </div>
         </section>
 
-        <section class="diving-indicator-section">
+        <section class="diving-indicator-section" id="scroll-next">
             <div class="indicator-sticky">
                 <div class="indicator-intro-stage">
                     <div class="container">
