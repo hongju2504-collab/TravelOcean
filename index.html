@@ -284,5 +284,70 @@
 
     <script src="./diving-journey/assets/js/diving-journey.js"></script>
     <script src="./assets/js/menu.js"></script>
+    <script>
+        (function () {
+            const mq = window.matchMedia('(max-width: 1024px)');
+            const cards = Array.from(document.querySelectorAll('.buddy-path-link'));
+            if (!cards.length) return;
+            let observer = null;
+
+            const clearActive = () => cards.forEach((card) => card.classList.remove('is-active'));
+            const clearInview = () => cards.forEach((card) => card.classList.remove('is-inview'));
+
+            const setupScrollReveal = () => {
+                if (observer) {
+                    observer.disconnect();
+                    observer = null;
+                }
+
+                clearInview();
+
+                if (!mq.matches) {
+                    cards.forEach((card) => card.classList.add('is-inview'));
+                    return;
+                }
+
+                observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (!entry.isIntersecting) return;
+                        entry.target.classList.add('is-inview');
+                        observer.unobserve(entry.target);
+                    });
+                }, {
+                    threshold: 0.18,
+                    rootMargin: '0px 0px -10% 0px'
+                });
+
+                cards.forEach((card) => observer.observe(card));
+            };
+
+            cards.forEach((card) => {
+                card.addEventListener('click', (e) => {
+                    if (!mq.matches) return;
+                    e.preventDefault();
+                    const isOpen = card.classList.contains('is-active');
+                    clearActive();
+                    if (!isOpen) card.classList.add('is-active');
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    if (!mq.matches) return;
+                    card.classList.remove('is-active');
+                });
+            });
+
+            window.addEventListener('resize', () => {
+                if (!mq.matches) clearActive();
+                setupScrollReveal();
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!mq.matches) return;
+                if (!e.target.closest('.buddy-path-link')) clearActive();
+            });
+
+            setupScrollReveal();
+        })();
+    </script>
 </body>
 </html>
