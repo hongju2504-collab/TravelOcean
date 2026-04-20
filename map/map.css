@@ -1,0 +1,167 @@
+.map-section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.map-section .title {
+    font-size: 28px;
+}
+
+/* 배경 */
+.bg {
+    position: absolute;
+    inset: 0;
+    background: url(./images/bg-map.png) no-repeat center/cover;
+    z-index: 0;
+}
+
+/* 지도 컨테이너 */
+.map-container {
+    position: relative;
+    height: 100%;
+    max-width: 1620px;
+    padding: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* 지도 */
+.map-img {
+    width: 100%;
+    max-width: 1400px;
+}
+
+/* 포인트 */
+.map-point {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+/* 핀 */
+.pin {
+    width: 32px;
+    cursor: pointer;
+    display: block;
+}
+
+/* 정보 박스 */
+/* info-box */
+.info-box {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    position: absolute;
+    bottom: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 400px;
+    height: 250px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.3s;
+}
+
+/* hover */
+.map-point:hover .info-box,
+.map-point .info-box:hover {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* hover 영역 */
+.map-point::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 400px;
+    height: 300px;
+
+    bottom: 0;
+}
+
+.point-2::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: 400px;
+  height: 140px;
+  top: 100%; /* 👈 아래쪽으로 변경 */
+}
+
+.map-point:hover .info-box,
+.map-point .info-box:hover {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* 버튼 */
+.more-btn {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* 위치 (지도 기준) */
+.point-1 {
+    top: 58%;
+    left: 28%;
+}
+
+.point-2 {
+    top: 48%;
+    left: 50%;
+}
+
+.point-3 {
+    top: 60%;
+    left: 73%;
+}
+
+/* 박스 위치 (아이콘 기준) */
+
+/* 그레이트 블루홀 (왼쪽 상단) */
+.point-1 .info-box {
+  bottom: 100%;
+  left: auto;
+  right: 10px;
+  transform: translateY(-10px);
+}
+
+/* 샤크, 욜란다 리프 (하단) */
+.point-2 .info-box {
+  top: 140%;
+  bottom: auto;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+}
+
+/* 블루코너 (상단) */
+.point-3 .info-box {
+  bottom: 140%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+}
+
+
+
+@media (max-width: 1024px) {
+    .map-section {
+        display: none;
+    }
+}
