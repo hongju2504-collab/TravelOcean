@@ -463,19 +463,11 @@
         z-index: 2;
     }
 
-    /* 1024px 이하: 스크롤 진입 시 아래 -> 위 모션 */
+    /* JS 연동 없이도 1024px 이하에서 기본 노출 */
     .buddy-path-link {
-        opacity: 0;
-        transform: translateY(36px);
-        transition:
-            opacity 0.5s ease,
-            transform 0.62s cubic-bezier(0.22, 1, 0.36, 1),
-            box-shadow 0.22s ease;
-    }
-
-    .buddy-path-link.is-inview {
         opacity: 1;
-        transform: translateY(0);
+        transform: none;
+        transition: box-shadow 0.22s ease;
     }
 
     .buddy-path-tri:has(.buddy-path-link--left:hover) .buddy-path-link--right,
@@ -843,6 +835,6 @@
     }
 
     .buddy-path-link--right .buddy-path-card__expand-icon img {
-        margin-left: 4px;
+        margin-left: 3px;
     }
 }
