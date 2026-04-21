@@ -1,0 +1,171 @@
+@import 'footer-base.css';
+
+.footer {
+    --footer-bg-color: #FFFFFF;
+    --footer-text-color: var(--primary-color);
+}
+
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* 스크롤바 숨김 */
+    font-family: 'Pretendard', sans-serif;
+}
+
+.en-title{
+    color: #ffffff;
+    margin-bottom: 80px;
+}
+.title{
+    color: #203EB5;
+    margin-bottom: 70px;
+}
+
+.btn-start{
+    background-color: #FFFFFF;
+    border: none;
+    display: inline;
+}
+.btn-next{
+    margin-top: 40px;
+    display: inline;
+    min-width: 180px;
+}
+
+#test-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.content{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.step {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #203EB5; */
+    color: white;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+    z-index: 1;
+}
+
+.step.active {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 2;
+}
+
+.step.prev {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.options {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-next{
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* 선택지 버튼 스타일 */
+.btn-border {
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.btn-border:hover,
+.btn-border.selected {
+    background: #203EB5;
+    color: white;
+    font-weight: bold;
+}
+
+#bg-image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('./bg.png') no-repeat center/cover;
+    z-index: 0;
+}
+
+.step {
+    background: transparent;
+    z-index: 1;
+}
+
+#step-1.step {
+    background: transparent;
+}
+
+.step.active .wave-bg-wrapper {
+    bottom: 0;
+}
+
+.waves {
+    width: 100%;
+    height: 15vh;
+    min-height: 100px;
+    display: block; /* 1. inline 요소의 미세한 하단 공백 제거 */
+    margin-bottom: -1px; /* 2. 겹침 처리를 통해 틈새 완벽 제거 */
+}
+
+.wave-bg-wrapper {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex; /* 3. flex를 사용하여 내부 요소를 수직으로 밀착 */
+    flex-direction: column;
+    transition: bottom 1s cubic-bezier(0.65, 0, 0.35, 1);
+    z-index: -1;
+}
+
+.wave-fill {
+    height: 85vh;
+    background: #ffffff;
+    flex-grow: 1; /* 4. 남은 공간을 빈틈없이 채움 */
+    width: 100%;
+}
+
+
+/* 웨이브 애니메이션 (가로로 움직임) */
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+.parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 7s; }
+.parallax > use:nth-child(2) { animation-delay: -3s; animation-duration: 10s; }
+.parallax > use:nth-child(3) { animation-delay: -4s; animation-duration: 13s; }
+.parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 20s; }
+
+@keyframes move-forever {
+    0% { transform: translate3d(-90px,0,0); }
+    100% { transform: translate3d(85px,0,0); }
+}
+

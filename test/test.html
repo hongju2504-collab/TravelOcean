@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Test</title>
+    <link rel="stylesheet" href="../assets/css/common/common.css">
+    <link rel="stylesheet" href="./test.css">
+</head>
+
+<body>
+
+    <div id="bg-image-container"></div>
+
+    <div id="test-container">
+        <section class="step active" id="start-step">
+            <div class="content">
+                <h3>Find Your Diving Style</h3>
+                <h1 class="en-title">Diving</h1>
+                <p>
+                    몇 가지 질문을 통해 당신에게 최적화된 다이빙 스팟을 추천해 드립니다. <br>
+                    이 섹션은 사용자의 취향 데이터를 토대로 맞춤형 중개 서비스를 제공하는 역할을 합니다.
+                </p>
+                <button class="btn-border btn-start" data-next="step-1" onclick="directNextStep(this)">
+                    Get Started
+                </button>
+            </div>
+        </section>
+
+        <section class="step" id="step-1">
+            <div class="wave-bg-wrapper">
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+                    </g>
+                </svg>
+                <div class="wave-fill"></div>
+            </div>
+
+            <div class="content">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 33%;"></div>
+                </div>
+                <h2 class="title">
+                    바닷속의 매력을 경험해 보신적이 있나요? <br>
+                    스노클링이나 체험다이빙도 바닷속 경험에 해당합니다.
+                </h2>
+
+                <div class="options">
+                    <button class="btn-border" data-next="answer-1" onclick="selectOption(this)">아예 처음이에요</button>
+                    <button class="btn-border" data-next="answer-1" onclick="selectOption(this)">잘 모르겠어요</button>
+                    <button class="btn-border" data-next="step-2" onclick="selectOption(this)">경험이 있어요</button>
+                    <button class="btn-border" data-next="step-2" onclick="selectOption(this)">자격증이 있어요</button>
+                </div>
+                <button class="btn-next btn-border" onclick="goToNextSection()">Next</button>
+            </div>
+        </section>
+
+        <section class="step" id="step-2">
+            <div class="wave-bg-wrapper">
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+                    </g>
+                </svg>
+                <div class="wave-fill"></div>
+            </div>
+
+            <div class="content">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 33%;"></div>
+                </div>
+                <h2 class="title">
+                    다이빙을 경험 해보셨군요! <br>
+                    다이빙 경험 수준을 알려주세요.
+                </h2>
+
+                <div class="options">
+                    <button class="btn-border" data-next="step-3" onclick="selectOption(this)">스노클링</button>
+                    <button class="btn-border" data-next="step-3" onclick="selectOption(this)">체험다이빙</button>
+                    <button class="btn-border" data-next="step-4" onclick="selectOption(this)">초보 다이버</button>
+                    <button class="btn-border" data-next="step-5" onclick="selectOption(this)">전문 다이버</button>
+                </div>
+                <button class="btn-next btn-border" onclick="goToNextSection()">Next</button>
+            </div>
+        </section>
+
+        <section class="step" id="step-3">
+            <div class="wave-bg-wrapper">
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+                    </g>
+                </svg>
+                <div class="wave-fill"></div>
+            </div>
+
+            <div class="content">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 33%;"></div>
+                </div>
+                <h2 class="title">
+                    바닷속의 매력에 빠질 준비가 충분히 되셨네요. <br>
+                    다이빙 자격증을 준비하고 계신가요?
+                </h2>
+
+                <div class="options">
+                    <button class="btn-border" data-next="step-???" onclick="selectOption(this)">네. 자격증 코스를 알아보고
+                        있어요</button><!-- 이거 어디로가야하죠 -->
+                    <button class="btn-border" data-next="step-6" onclick="selectOption(this)">아니오. 아직 다이빙에 대한 정보를 탐색
+                        중이에요.</button>
+                </div>
+                <button class="btn-next btn-border" onclick="goToNextSection()">Next</button>
+            </div>
+        </section>
+
+        <section class="step" id="step-4">
+            <div class="wave-bg-wrapper">
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+                    </g>
+                </svg>
+                <div class="wave-fill"></div>
+            </div>
+
+            <div class="content">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 33%;"></div>
+                </div>
+                <h2 class="title">
+                    라이센스드 다이버님의 방문을 환영합니다. <br>
+                    바닷속을 탐험하실 준비가 완료되셨네요. <br>
+                    다이빙 여행을 계획하고 계신가요?
+                </h2>
+
+                <div class="options">
+                    <button class="btn-border" data-next="answer-4" onclick="selectOption(this)">네. 여행을 계획하고
+                        있습니다</button>
+                    <button class="btn-border" data-next="answer-5" onclick="selectOption(this)">아니오. 다음 자격증 코스를 준비하고
+                        있어요. </button>
+                </div>
+                <button class="btn-next btn-border" onclick="goToNextSection()">Next</button>
+            </div>
+        </section>
+
+        <section class="step" id="step-5">
+            <div class="wave-bg-wrapper">
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+                    </g>
+                </svg>
+                <div class="wave-fill"></div>
+            </div>
+
+            <div class="content">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 33%;"></div>
+                </div>
+                <h2 class="title">
+                    고수 다이버님의 방문을 환영합니다. <br>
+                    탐험가를 위한 익스트림 여행 코스는 물론 <br>
+                    초심자를 교육할 수 있는 프리랜서 강사 매칭도 가능해요.
+                </h2>
+
+                <div class="options">
+                    <button class="btn-border" data-next="answer-6" onclick="selectOption(this)">여행정보 탐색</button>
+                    <button class="btn-border" data-next="answer-7" onclick="selectOption(this)">강사매칭 연결</button>
+                </div>
+                <button class="btn-next btn-border" onclick="goToNextSection()">Next</button>
+            </div>
+        </section>
+
+        <section class="step" id="step-6">
+            <div class="wave-bg-wrapper">
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+                    </g>
+                </svg>
+                <div class="wave-fill"></div>
+            </div>
+
+            <div class="content">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 33%;"></div>
+                </div>
+                <h2 class="title">
+                    관심있는 다이빙이 있나요? <br>
+                    스쿠버다이빙과 프리다이빙 중 관심 영역을 선택해주세요.
+                </h2>
+
+                <div class="options">
+                    <button class="btn-border" data-next="answer-2" onclick="selectOption(this)">스쿠버다이빙</button>
+                    <button class="btn-border" data-next="answer-3" onclick="selectOption(this)">프리다이빙</button>
+                </div>
+                <button class="btn-next btn-border" onclick="goToNextSection()">Next</button>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="./test.js"></script>
+</body>
+
+</html>

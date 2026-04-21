@@ -203,7 +203,7 @@
     font-family: 'Wanted Sans Variable', 'Wanted Sans', -apple-system, BlinkMacSystemFont, system-ui,
         'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
     font-weight: 700;
-    font-size: clamp(72px, 18vw, 240px);
+    font-size: clamp(72px, 14vw, 240px);
     line-height: 1.2;
     letter-spacing: -5px;
     color: var(--gray-color);
@@ -219,8 +219,8 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 20;
-    width: min(480px, 90vw);
-    height: min(480px, 90vw);
+    width: min(480px, 30vw);
+    height: min(480px, 30vw);
     max-width: 480px;
     max-height: 480px;
     object-fit: contain;
@@ -233,8 +233,8 @@
     position: relative;
     z-index: 1;
     background: linear-gradient(0deg, #ffffff 0%, #f2f2f2 100%);
-    padding-top: clamp(40px, 5vw, 64px);
-    padding-bottom: clamp(100px, 14vw, 200px);
+    padding-top: clamp(48px, 6vw, 72px);
+    padding-bottom: clamp(100px, 12vw, 160px);
 }
 
 /* 상단: 제목(좌) · 탭(우) */
@@ -245,6 +245,13 @@
     align-items: flex-end;
     gap: 24px 32px;
     margin-bottom: clamp(36px, 4.5vw, 52px);
+}
+
+@media (max-width: 1508px) {
+    .archive-head {
+        gap: clamp(30px, 3.2vw, 38px) 32px;
+        margin-bottom: clamp(18px, 3vw, 28px);
+    }
 }
 
 .archive-section-title {
@@ -270,11 +277,11 @@
     background: transparent;
     cursor: pointer;
     font-family: 'Poppins', 'Noto Sans KR', sans-serif;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: clamp(20px, 1.9vw, 24px);
+    font-weight: 400;
     letter-spacing: -1px;
     color: var(--primary-color);
-    padding: 8px 35px;
+    padding: clamp(8px, 1vw, 12px) clamp(25px, 2.5vw, 35px);
     line-height: 1;
     border-radius: 999px;
     transition: background 0.2s ease, color 0.2s ease;
@@ -288,7 +295,7 @@
 .archive-filter-btn.is-active {
     background: var(--primary-color);
     color: #fff !important;
-    padding: 8px 35px;
+    padding: clamp(8px, 1vw, 12px) clamp(25px, 2.5vw, 35px);
 }
 
 .archive-filter-btn.is-active:hover {
@@ -334,15 +341,33 @@
 .diving-archive-section .archive-card .card-txt-wrap .card-title {
     color: var(--black-color);
     font-weight: 600;
-    font-size: 28px;
+    font-size: clamp(24px, 2.8vw, 28px);
     line-height: 1.35;
-    letter-spacing: -0.5px;
+    letter-spacing: -1px;
 }
 
 .diving-archive-section .archive-card .card-txt-wrap .card-title span {
-    font-size: 22px;
+    font-size: clamp(20px, 2.4vw, 22px);
     font-weight: 500;
-    letter-spacing: -0.3px;
+    letter-spacing: -1px;
+}
+
+@media (max-width: 1280px) {
+    .diving-archive-section .archive-card .card-txt-wrap .card-title {
+        font-size: 22px;
+    }
+    .diving-archive-section .archive-card .card-txt-wrap .card-title span {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .diving-archive-section .archive-card .card-txt-wrap .card-title {
+        font-size: 20px;
+    }
+    .diving-archive-section .archive-card .card-txt-wrap .card-title span {
+        font-size: 16px;
+    }
 }
 
 .diving-archive-section .archive-card .card-txt-wrap .desc {
@@ -412,6 +437,23 @@
     .archive-hero-read {
         right: clamp(22px, 3vw, 40px);
     }
+
+    .archive-brand-band {
+        min-height: 220px;
+    }
+
+    .archive-brand-band::before {
+        top: 58%;
+        font-size: clamp(80px, 12vw, 100px);
+        letter-spacing: -2px;
+    }
+
+    .archive-brand-band__logo {
+        width: min(200px, 28vw);
+        height: min(200px, 28vw);
+        max-width: 260px;
+        max-height: 260px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -429,6 +471,10 @@
         grid-template-columns: 1fr;
     }
 
+    .diving-archive-section .archive-image-wrap img {
+        aspect-ratio: 16 / 8;
+    }
+
     .archive-head {
         flex-direction: column;
         align-items: flex-start;
@@ -437,6 +483,49 @@
     .archive-filter {
         width: 100%;
         justify-content: flex-start;
+    }
+
+    .archive-brand-band {
+        min-height: 160px;
+    }
+
+    .archive-brand-band::before {
+        top: 52%;
+        font-size: clamp(60px, 10vw, 80px);
+        letter-spacing: -2px;
+    }
+
+    .archive-brand-band__logo {
+        width: clamp(120px, 20vw, 160px);
+        height: clamp(120px, 20vw, 160px);
+        max-width: 160px;
+        max-height: 160px;
+        top: 40%;
+        transform: translate(-50%, -50%);
+    }
+
+    .archive-filter-btn {
+        font-size: clamp(14px, 2.6vw, 16px);
+        padding: 8px clamp(16px, 2vw, 20px);
+    }
+    .archive-head {
+        gap: 16px 16px;
+        margin-bottom: 6px;
+    }
+}
+
+@media (max-width: 402px) {
+    .archive-brand-band::before {
+        font-size: clamp(40px, 16vw, 60px);
+    }
+
+    .archive-brand-band__logo {
+        width: clamp(80px, 14vw, 100px);
+        height: clamp(80px, 14vw, 100px);
+        max-width: 100px;
+        max-height: 100px;
+        top: 45%;
+        transform: translate(-50%, -50%);
     }
 }
 
