@@ -491,11 +491,11 @@
     }
 
     .buddy-path-link--left .buddy-path-card__media {
-        background-image: url('../images/main-tb-card-1.png');
+        background-image: url('../images/main-tb-card-1.webp');
     }
 
     .buddy-path-link--right .buddy-path-card__media {
-        background-image: url('../images/main-tb-card-2.png');
+        background-image: url('../images/main-tb-card-2.webp');
     }
 
     .buddy-path-link--left .buddy-path-card__media img,
@@ -541,7 +541,7 @@
         width: 40px;
         height: 40px;
         transform: translateX(-50%);
-        background: url('../images/plus-sm.png') center / contain no-repeat;
+        background: url('../images/plus-sm.webp') center / contain no-repeat;
         z-index: 3;
         pointer-events: none;
         opacity: 1;

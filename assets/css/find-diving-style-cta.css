@@ -1,4 +1,4 @@
-/* divers-community 아래 — Find Your Diving Style CTA (장식 배경: test-bg.png ::before) */
+/* divers-community 아래 — Find Your Diving Style CTA (장식 배경: test-bg.webp ::before) */
 
 .find-diving-style-cta {
     position: relative;
@@ -24,7 +24,7 @@
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background-image: url(../images/test-bg.png);
+    background-image: url(../images/test-bg.webp);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
