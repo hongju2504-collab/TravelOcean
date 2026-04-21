@@ -682,7 +682,7 @@ body {
 }
 
 .has-submenu.is-open .submenu-list {
-    max-height: 110px;
+    max-height: 130px;
 }
 
 .submenu-list a {
@@ -692,7 +692,7 @@ body {
     letter-spacing: -0.5px;
     color: var(--primary-color);
     line-height: 1;
-    padding: 10px 0 15px 56px;
+    padding: 12px 0 15px 56px;
 }
 
 .submenu-list a:hover {

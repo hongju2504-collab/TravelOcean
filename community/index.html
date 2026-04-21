@@ -1,10 +1,55 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>community</title>
+    <title>Community — BlueBuddy</title>
+    <meta name="description" content="Blue Buddy Diving Community">
+
+
+    <link rel="canonical" href="https://blue-buddy.netlify.app/">
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/images/android-chrome-512x512.png">
+
+
+
+    <meta property="og:title" content="Blue Buddy Diving Community">
+    <meta property="og:description" content="Blue Buddy Diving Community">
+    <meta property="og:image" content="https://blue-buddy.netlify.app/assets/images/og-image.webp">
+    <meta property="og:url" content="https://blue-buddy.netlify.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Blue Buddy Diving Community">
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blue Buddy Diving Community">
+    <meta name="twitter:description" content="Blue Buddy Diving Community">
+    <meta name="twitter:image" content="https://blue-buddy.netlify.app/assets/images/og-image.webp">
+    <meta name="twitter:url" content="https://blue-buddy.netlify.app/">
+    <meta name="twitter:site" content="Blue Buddy Diving Community">
+    <meta name="twitter:creator" content="Blue Buddy Diving Community">
+
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="google" content="notranslate">
+
+
+    <!-- 네이버 서치어드바이저 -->
+    <!-- <meta name="naver-site-verification" content="b6f6a6d1d53973b64d0d6e1bbb26c4ab5a168834" /> -->
+
+    <!-- 구글 서치콘솔 -->
+    <!-- <meta name="google-site-verification" content="Di_nPPle_ReqRTUFP4r6TSHClg8lrpVMVn7oZD_Fdis" /> -->
+
+
+
     <link rel="stylesheet" href="../assets/css/reset/reset.min.css">
     <link rel="stylesheet" href="./assets/css/common.css">
     <link rel="stylesheet" href="./assets/css/footer-w.css">
@@ -13,24 +58,24 @@
 
 <body>
 
-    <header class="header header-container">
+    <header class="header container">
         <h1 class="logo">
             <a href="../index.html">
-                <img src="./assets/images/logo.png" alt="logo">
+                <img src="./assets/images/logo.webp" alt="logo">
             </a>
         </h1>
         <div class="menu-bar">
             <div class="menu-bar-wrap">
                 <a href="#" class="menu-btn">
                     menu
-                    <img src="./assets/images/menu-arrow.png" alt="arrow">
+                    <img src="./assets/images/menu-arrow.webp" alt="arrow">
                 </a>
                 <a href="#" class="mute">
-                    <img src="./assets/images/mute.png" alt="mute">
+                    <img src="./assets/images/mute.webp" alt="mute">
                 </a>
             </div>
             <a href="#" class="menu-bar-mo">
-                <img src="../assets/images/menu-alt-2.png" alt="menu">
+                <img src="../assets/images/menu-alt-2.webp" alt="menu">
             </a>
         </div>
     </header>
@@ -51,13 +96,14 @@
                             <span class="menu-label">About Diving</span>
                         </span>
                         <span class="submenu-arrow-wrap" aria-hidden="true">
-                            <img class="submenu-arrow submenu-arrow-blue" src="../assets/images/menu-arrow-b.png"
+                            <img class="submenu-arrow submenu-arrow-blue" src="../assets/images/menu-arrow-b.webp"
                                 alt="submenu arrow">
-                            <img class="submenu-arrow submenu-arrow-white" src="../assets/images/menu-arrow.png"
+                            <img class="submenu-arrow submenu-arrow-white" src="../assets/images/menu-arrow.webp"
                                 alt="submenu arrow">
                         </span>
                     </button>
                     <ul class="submenu-list">
+                        <li><a href="../about-diving/index.html">About Diving</a></li>
                         <li><a href="../about-diving/index.html#scuba-diving">Scuba Diving</a></li>
                         <li><a href="../about-diving/index.html#free-diving">Free Diving</a></li>
                     </ul>
@@ -78,12 +124,12 @@
             <ul class="global-menu-sns">
                 <li>
                     <a href="#" aria-label="facebook">
-                        <img src="../assets/images/sns-facebook.png" alt="facebook">
+                        <img src="../assets/images/sns-facebook.webp" alt="facebook">
                     </a>
                 </li>
                 <li>
                     <a href="#" aria-label="instagram">
-                        <img src="../assets/images/sns-instagram.png" alt="instagram">
+                        <img src="../assets/images/sns-instagram.webp" alt="instagram">
                     </a>
                 </li>
             </ul>
@@ -160,45 +206,65 @@
             </div>
         </section>
 
-        <section class="blue-buddy-container">
-            <div class="bg-text-wrap">
-                <h2 class="big-title">BLUE BUDDY</h2>
-            </div>
-            <div class="diver-icon">
-                <img src="./assets/images/diving-logo.png" alt="스쿠버 다이빙 아이콘">
-            </div>
+        <section class="archive-brand-band" aria-hidden="true">
+            <img class="archive-brand-band__logo" src="../diving-archive/assets/images/diving-logo.webp"
+                alt="Diving Archive 로고" width="480" height="480" decoding="async" />
         </section>
 
-        <section id="dive-reviews" class="dive-reviews-section">
+        <section id="dive-reviews" class="dive-reviews-section divers-reflections">
             <div class="container">
                 <h2 class="en-title">Dive Reviews</h2>
+                <div class="reflection-slider">
+                    <div class="reflection-track">
+                        <article class="reflection-review-card">
+                            <p class="desc">"처음 느껴보는 물 속에서의 평온함은 오직 나의 숨소리에만 집중하는 고요한 시간이었습니다. 초심자에게 적합한 잔잔한 보홀의 바다 덕분에 겁이 많던 저도 안심하고 첫 다이빙을 마칠 수 있었어요."</p>
+                            <p class="reflection-review-name">고예신 님</p>
+                        </article>  
+                        <article class="reflection-review-card">
+                            <p class="desc">"팔라우의 강한 조류를 타며 만난 수천 마리의 물고기 떼는 마치 다른 행성에 온 듯한 착각을 불러일으켰습니다. 전문 가이드의 안내 덕분에 누구보다 안전하고 밀도 높은 탐험을 즐길 수 있었습니다."</p>
+                            <p class="reflection-review-name">최유진 님</p>
+                        </article>
+                        <article class="reflection-review-card">
+                            <p class="desc">"수많은 다이빙 사이트를 다녀봤지만, 이번 시즌 베스트로 추천해주신 칼라 파고드는 제 다이빙 로그 중 단연 절정이었습니다. 거대한 암서와 여유로운 산호 군락은 압도적인 장관을 보여줬어요."</p>
+                            <p class="reflection-review-name">구동매 님</p>
+                        </article>
+                        <article class="reflection-review-card">
+                            <p class="desc">"말디브의 아침 다이빙은 빛이 수면을 통과하며 만들어내는 패턴이 정말 인상 깊었습니다. 천천히 이동하는 만타와 함께한 40분은 그 어떤 휴양보다 강렬한 기억으로 남았어요."</p>
+                            <p class="reflection-review-name">정도윤 님</p>
+                        </article>
+                        <article class="reflection-review-card">
+                            <p class="desc">"야간 다이빙이 무서웠는데, 코타오 포인트는 시야 확보가 좋아 부담 없이 도전할 수 있었습니다. 낮과는 완전히 다른 생태를 가까이서 보며 바다를 더 입체적으로 이해하게 되었어요."</p>
+                            <p class="reflection-review-name">서민정 님</p>
+                        </article>
+                        <article class="reflection-review-card">
+                            <p class="desc">"장비 컨디션 체크부터 입수 동선까지 세심하게 관리해 준 팀 덕분에 내내 편안했습니다. 여행이 끝난 지금도 그 푸른 색감과 수중의 고요함이 자꾸 떠오를 만큼 만족스러운 경험이었어요."</p>
+                            <p class="reflection-review-name">박하늘 님</p>
+                        </article>
 
-                <div class="review-list">
-                    <div class="review-item">
-                        <p class="subtitle">
-                            "처음 느껴보는 물 속에서의 경험은 오직 나의 숨소리에만 집중하는 고요한 시간이었습니다.
-                            초심자에게 적합한 잔잔한 보홀의 바다 덕분에 겁이 많던 저도 안심하고 첫 다이빙을 마칠 수 있었어요.
-                            수면 아래에서 만난 거북이의 눈망울은 평생 잊지 못할 가장 따뜻한 기억으로 남을 것 같습니다."
-                        </p>
-                        <h3 class="card-title">고애신 님</h3>
-                    </div>
-
-                    <div class="review-item">
-                        <p class="subtitle">
-                            "팔라우의 강한 조류를 타며 만난 수천 마리의 물고기 떼는 마치 다른 행성에 온 듯한 착각을 불러일으켰습니다.
-                            전문가의 큐레이션대로 시야와 생태계가 완벽하게 조화된 포인트를 경험하니 다이빙의 진정한 매력이 무엇인지 비로소 알게 되었어요.
-                            복잡한 일상의 소음을 뒤로하고 오직 생동감 넘치는 푸른 심연에만 몰입했던 최고의 시간이었습니다."
-                        </p>
-                        <h3 class="card-title">최유진 님</h3>
-                    </div>
-
-                    <div class="review-item">
-                        <p class="subtitle">
-                            "수많은 다이빙 사이트를 다녀봤지만, 이번 시즌 베스트로 추천해주신 갈라파고스는 제 다이빙 로그 중 단연 정점이었습니다.
-                            거대한 망치상어 떼와 마주한 순간 느꼈던 압도적인 생명력은 지상에서는 결코 느낄 수 없는 귀한 감동이었죠.
-                            안전과 접근성까지 세심하게 고려된 가이드 덕분에 오직 탐험의 즐거움에만 온전히 집중할 수 있었습니다."
-                        </p>
-                        <h3 class="card-title">구동매 님</h3>
+                        <article class="reflection-review-card clone">
+                            <p class="desc">"처음 느껴보는 물 속에서의 평온함은 오직 나의 숨소리에만 집중하는 고요한 시간이었습니다. 초심자에게 적합한 잔잔한 보홀의 바다 덕분에 겁이 많던 저도 안심하고 첫 다이빙을 마칠 수 있었어요."</p>
+                            <p class="reflection-review-name">고예신 님</p>
+                        </article>
+                        <article class="reflection-review-card clone">
+                            <p class="desc">"팔라우의 강한 조류를 타며 만난 수천 마리의 물고기 떼는 마치 다른 행성에 온 듯한 착각을 불러일으켰습니다. 전문 가이드의 안내 덕분에 누구보다 안전하고 밀도 높은 탐험을 즐길 수 있었습니다."</p>
+                            <p class="reflection-review-name">최유진 님</p>
+                        </article>
+                        <article class="reflection-review-card clone">
+                            <p class="desc">"수많은 다이빙 사이트를 다녀봤지만, 이번 시즌 베스트로 추천해주신 칼라 파고드는 제 다이빙 로그 중 단연 절정이었습니다. 거대한 암서와 여유로운 산호 군락은 압도적인 장관을 보여줬어요."</p>
+                            <p class="reflection-review-name">구동매 님</p>
+                        </article>
+                        <article class="reflection-review-card clone">
+                            <p class="desc">"말디브의 아침 다이빙은 빛이 수면을 통과하며 만들어내는 패턴이 정말 인상 깊었습니다. 천천히 이동하는 만타와 함께한 40분은 그 어떤 휴양보다 강렬한 기억으로 남았어요."</p>
+                            <p class="reflection-review-name">정도윤 님</p>
+                        </article>
+                        <article class="reflection-review-card clone">
+                            <p class="desc">"야간 다이빙이 무서웠는데, 코타오 포인트는 시야 확보가 좋아 부담 없이 도전할 수 있었습니다. 낮과는 완전히 다른 생태를 가까이서 보며 바다를 더 입체적으로 이해하게 되었어요."</p>
+                            <p class="reflection-review-name">서민정 님</p>
+                        </article>
+                        <article class="reflection-review-card clone">
+                            <p class="desc">"장비 컨디션 체크부터 입수 동선까지 세심하게 관리해 준 팀 덕분에 내내 편안했습니다. 여행이 끝난 지금도 그 푸른 색감과 수중의 고요함이 자꾸 떠오를 만큼 만족스러운 경험이었어요."</p>
+                            <p class="reflection-review-name">박하늘 님</p>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -212,7 +278,7 @@
                     <li class="accordion-item active">
                         <div class="accordion-header">
                             <h3 class="title white">수영을 못하는데 다이빙을 할 수 있을까요?</h3>
-                            <div class="btn-arrow"><img src="./assets/images/btn-icon1-w.png"></div>
+                            <div class="btn-arrow"><img src="./assets/images/btn-icon1-w.webp"></div>
                         </div>
                         <div class="accordion-body">
                             <div class="inner-content">
@@ -239,7 +305,7 @@
                     <li class="accordion-item">
                         <div class="accordion-header">
                             <h3 class="title white">코에 물이 들어오거나 숨이 막히면 어쩌죠?</h3>
-                            <div class="btn-arrow"><img src="./assets/images/btn-icon1-w.png"></div>
+                            <div class="btn-arrow"><img src="./assets/images/btn-icon1-w.webp"></div>
                         </div>
                         <div class="accordion-body">
                             <div class="inner-content">
@@ -266,7 +332,7 @@
                     <li class="accordion-item">
                         <div class="accordion-header">
                             <h3 class="title white">다이빙은 위험하고 어려운 운동 아닌가요?</h3>
-                            <div class="btn-arrow"><img src="./assets/images/btn-icon1-w.png"></div>
+                            <div class="btn-arrow"><img src="./assets/images/btn-icon1-w.webp"></div>
                         </div>
                         <div class="accordion-body">
                             <div class="inner-content">
@@ -293,7 +359,7 @@
                     <li class="accordion-item">
                         <div class="accordion-header">
                             <h3 class="title white">귀가 아프면 어쩌죠?</h3>
-                            <div class="btn-arrow"><img src="./assets/images/btn-icon1-w.png"></div>
+                            <div class="btn-arrow"><img src="./assets/images/btn-icon1-w.webp"></div>
                         </div>
                         <div class="accordion-body">
                             <div class="inner-content">
@@ -320,7 +386,7 @@
                     <li class="accordion-item">
                         <div class="accordion-header">
                             <h3 class="title white">물속에서 정신을 잃거나 사고가 나면 어쩌죠?</h3>
-                            <div class="btn-arrow"><img src="./assets/images/btn-icon1-w.png"></div>
+                            <div class="btn-arrow"><img src="./assets/images/btn-icon1-w.webp"></div>
                         </div>
                         <div class="accordion-body">
                             <div class="inner-content">
@@ -371,7 +437,7 @@
                 <div class="footer-left">
                     <h2>
                         <a href="../index.html">
-                            <img src="../assets/images/logo-txt.png" alt="footer-logo">
+                            <img src="../assets/images/logo-txt.webp" alt="footer-logo">
                         </a>
                     </h2>
                     <p class="copyright">ⓒ Copyright by JinGanJang</p>
@@ -383,12 +449,12 @@
                     <ul class="sns-list">
                         <li class="sns">
                             <a href="#">
-                                <img src="../assets/images/sns-facebook.png" alt="facebook">
+                                <img src="../assets/images/sns-facebook.webp" alt="facebook">
                             </a>
                         </li>
                         <li class="sns">
                             <a href="#">
-                                <img src="../assets/images/sns-instagram.png" alt="instagram">
+                                <img src="../assets/images/sns-instagram.webp" alt="instagram">
                             </a>
                         </li>
                     </ul>
