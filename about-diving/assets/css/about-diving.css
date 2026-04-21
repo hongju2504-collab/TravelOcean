@@ -296,7 +296,22 @@ body {
 /* 배경 */
 .attractions {
     padding: 200px 0;
-    background: url("../images/bg.png") no-repeat center/cover;
+    background: url("../images/bg.webp") no-repeat center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.attractions::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 0%, #081A4A 100%);
+    pointer-events: none;
+}
+
+.attractions>* {
+    position: relative;
+    z-index: 1;
 }
 
 /* 헤더 */

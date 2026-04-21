@@ -2,6 +2,7 @@
 
 .wave-box {
     background-color: #081A4A;
+    margin-top: -2px;
 }
 .waves {
     position: relative;
