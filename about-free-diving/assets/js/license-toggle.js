@@ -10,11 +10,11 @@ arrowBtns.forEach(function(arrowImg) {
 
         if (isOpen) {
             detail.style.display = 'none';
-            arrowImg.src = '../about-free-diving/assets/images/arrow-down.png';
+            arrowImg.src = '../about-free-diving/assets/images/arrow-down.webp';
             arrowImg.alt = 'arrow';
         } else {
             detail.style.display = 'block';
-            arrowImg.src = '../about-free-diving/assets/images/arrow-up.png';
+            arrowImg.src = '../about-free-diving/assets/images/arrow-up.webp';
             arrowImg.alt = 'arrow-up';
         }
     });

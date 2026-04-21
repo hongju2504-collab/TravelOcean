@@ -1,24 +1,5 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
-/* --- 레이아웃 설정 --- */
-.container {
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 100px 120px;
-}
-
-/* header */
-.header {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 120;
-}
-
-.header-container {
-    padding: 0 120px;
-}
 
 /* --- Find Birdy --- */
 .find-birdy {
@@ -244,84 +225,120 @@
     padding: 0 5px;
 }
 
-/* --- Blue Buddy 섹션 --- */
-.blue-buddy-container {
+/* --- Archive Brand Band (diving-journey 동일) --- */
+.archive-brand-band {
     position: relative;
-    width: 100%;
-    height: 600px;
-    /* 이미지 비율에 맞춰 높이 설정 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    /* 큰 텍스트가 화면 밖으로 나가는 것 방지 */
-    margin: 80px 0;
+    overflow: visible;
+    min-height: clamp(360px, 36vw, 640px);
+    margin: 80px 0 0;
+    padding: 0;
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 50%, #f2f2f2 50%, #f2f2f2 100%);
+    pointer-events: none;
 }
 
-.bg-text-wrap {
-    user-select: none;
-}
-
-.big-title {
-    font-family: 'Pretendard', sans-serif;
-    font-weight: 900;
-    /* BLACK 굵기 */
-    font-size: 240px;
-    color: var(--gray-color);
-    /* #f2f2f2 */
-    letter-spacing: -5px;
-    white-space: nowrap;
-    line-height: 1;
-}
-
-.diver-icon {
+.archive-brand-band::before {
+    content: 'BLUE BUDDY';
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+    top: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 1;
+    font-family: 'Wanted Sans Variable', 'Wanted Sans', -apple-system, BlinkMacSystemFont, system-ui,
+        'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    font-weight: 700;
+    font-size: clamp(72px, 14vw, 240px);
+    line-height: 1.2;
+    letter-spacing: -5px;
+    color: var(--gray-color);
+    white-space: nowrap;
+    user-select: none;
+    pointer-events: none;
 }
 
-.diver-icon img {
-    height: 400px;
-    /* 텍스트 크기에 맞춰 아이콘 크기 조절 */
-    width: auto;
+.archive-brand-band__logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    width: min(480px, 30vw);
+    height: min(480px, 30vw);
+    max-width: 480px;
+    max-height: 480px;
     object-fit: contain;
+    display: block;
+    pointer-events: none;
 }
 
 /* --- Dive Reviews --- */
 .dive-reviews-section {
     background: var(--bg-gradient-color);
-    padding: 160px 0;
 }
 
 .dive-reviews-section .en-title {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
-.review-list {
+.divers-reflections {
+    overflow: hidden;
+}
+
+.reflection-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.reflection-track {
     display: flex;
-    justify-content: space-between;
-    gap: 60px;
+    width: max-content;
+    gap: 20px;
+    animation: reflectionFlow 30s linear infinite;
 }
 
-.review-item {
-    flex: 1;
-    border-left: 1px solid var(--black-color);
-    padding-left: 30px;
+.reflection-slider:hover .reflection-track {
+    animation-play-state: paused;
+}
+
+.reflection-review-card {
+    width: min(45vw, 420px);
+    flex: 0 0 min(45vw, 420px);
+    min-height: min(330px, 28vw);
+    border-left: 2px solid rgba(32, 62, 181, 0.35);
+    padding: 0 0 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 380px;
+    color: var(--black-color);
+    background-color: transparent;
 }
 
-.review-item .subtitle {
-    word-break: keep-all;
-    margin-bottom: 40px;
+.reflection-review-name {
+    margin-top: 24px;
+    font-size: 22px;
+    color: var(--black-color);
+    font-weight: 500;
 }
 
-.review-item .card-title {
-    margin-top: auto;
+@keyframes reflectionFlow {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 900px) {
+    .reflection-review-card {
+        width: 40vw;
+        flex-basis: 40vw;
+        min-height: min(280px, 36vw);
+    }
+
+    .reflection-review-text {
+        font-size: 14px;
+    }
+
+    .reflection-review-name {
+        font-size: 18px;
+        margin-top: 18px;
+    }
 }
 
 /* --- BiBy Guide 섹션 --- */
@@ -331,6 +348,11 @@
     background: url('../images/bg-wave.png') no-repeat center center;
     background-size: cover;
     padding: 160px 0;
+    margin-top: 180px;
+}
+
+.biby-guide-section .container {
+    padding-top: 180px;
 }
 
 .white-text {
@@ -491,24 +513,6 @@
 /* --- Desktop & Laptop (1280px) --- */
 @media screen and (max-width: 1280px) {
 
-    /* 공통 컨테이너 조절 */
-    .container {
-        max-width: 1200px;
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    /* 1. 공통 타이틀 크기 조정 */
-    .en-title {
-        font-size: 64px;
-        /* 기존 84px에서 축소 */
-        letter-spacing: -2px;
-    }
-
-    .title {
-        font-size: 36px;
-        /* 기존 42px에서 축소 */
-    }
 
     /* 2. Find Birdy 섹션 (게시판 영역) */
     .main-content {
@@ -534,16 +538,9 @@
     }
 
     /* 3. Dive Reviews 섹션 */
-    .reviews-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        /* 3열 유지 */
-        gap: 30px;
-    }
-
-    .review-card .desc {
-        font-size: 16px;
-        /* 텍스트가 넘치지 않게 조정 */
+    .reflection-review-card {
+        width: min(45vw, 420px);
+        flex-basis: min(45vw, 420px);
     }
 
     /* 4. BiBy Guide 섹션 (아코디언 영역) */
@@ -578,25 +575,31 @@
         height: 36px;
     }
 
+    .dive-reviews-section .en-title {
+        margin-bottom: 40px;
+    }
+
 }
 
 /* --- Tablet Landscape (1024px) --- */
 @media screen and (max-width: 1024px) {
 
-    /* 1. 공통 컨테이너 및 텍스트 조정 */
-    .container {
-        padding-left: 40px;
-        padding-right: 40px;
+    /* Archive Brand Band */
+    .archive-brand-band {
+        min-height: 220px;
     }
 
-    .en-title {
-        font-size: 54px;
-        /* 1280px의 64px에서 추가 축소 */
+    .archive-brand-band::before {
+        top: 58%;
+        font-size: clamp(80px, 12vw, 100px);
+        letter-spacing: -2px;
     }
 
-    .title {
-        font-size: 32px;
-        /* 36px -> 32px */
+    .archive-brand-band__logo {
+        width: min(200px, 28vw);
+        height: min(200px, 28vw);
+        max-width: 260px;
+        max-height: 260px;
     }
 
     /* 2. Find Birdy 섹션 (게시판 영역) */
@@ -632,18 +635,6 @@
         /* 텍스트 줄바꿈 방지를 위해 축소 */
     }
 
-    /* 3. Dive Reviews 섹션 */
-    .reviews-container {
-        grid-template-columns: repeat(3, 1fr);
-        /* 3열 유지하되 간격 조정 */
-        gap: 20px;
-    }
-
-    .review-card .desc {
-        font-size: 15px;
-        line-height: 1.5;
-    }
-
     /* 4. BiBy Guide 섹션 (아코디언) */
     .biby-guide-section {
         padding: 80px 0;
@@ -675,24 +666,37 @@
         font-size: 18px;
     }
 
+    .dive-reviews-section .en-title {
+        margin-bottom: 30px;
+    }
+
 }
 
 /* --- Tablet Portrait (768px) --- */
 @media screen and (max-width: 768px) {
 
-    /* 1. 공통 레이아웃 조정 */
-    .container {
-        padding: 60px 30px;
-        /* 전체 여백 축소 */
-    }
-
-    .en-title {
-        font-size: 42px;
-        /* 타이틀 크기 추가 축소 */
-    }
-
     .title-sub {
         font-size: 18px;
+    }
+
+    /* Archive Brand Band */
+    .archive-brand-band {
+        min-height: 160px;
+    }
+
+    .archive-brand-band::before {
+        top: 52%;
+        font-size: clamp(60px, 10vw, 80px);
+        letter-spacing: -2px;
+    }
+
+    .archive-brand-band__logo {
+        width: clamp(120px, 20vw, 160px);
+        height: clamp(120px, 20vw, 160px);
+        max-width: 160px;
+        max-height: 160px;
+        top: 40%;
+        transform: translate(-50%, -50%);
     }
 
     /* 2. Find Birdy 섹션 (구조 변경 핵심) */
@@ -717,7 +721,6 @@
     .sidebar {
         width: 100%;
         border-top: none;
-        border-bottom: 2px solid var(--black-color);
         padding: 0 0 10px 0;
     }
 
@@ -757,49 +760,19 @@
     }
 
     /* 3. Dive Reviews 섹션 */
-    /* Dive Reviews 스와이프 컨테이너 */
-    .reviews-container {
-        display: flex;
-        flex-direction: row;
-        /* 가로 배열 강제 유지 */
-        flex-wrap: nowrap;
-        /* 줄바꿈 방지 */
-        overflow-x: auto;
-        /* 가로 스크롤 허용 */
-        scroll-snap-type: x mandatory;
-        /* 터치 시 카드에 딱 맞게 스냅되는 효과 */
-        gap: 20px;
-        padding-bottom: 20px;
-
-        /* 스크롤바 숨기기 (모바일 환경 깔끔하게) */
-        -ms-overflow-style: none;
-        /* IE and Edge */
-        scrollbar-width: none;
-        /* Firefox */
+    .reflection-review-card {
+        width: min(50vw, 360px);
+        flex-basis: min(50vw, 360px);
+        min-height: min(240px, 56vw);
     }
 
-    .reviews-container::-webkit-scrollbar {
-        display: none;
-        /* Chrome, Safari, Opera */
+    .reflection-review-text {
+        font-size: 14px;
     }
 
-    /* 자바스크립트용 드래그 상태 클래스 */
-    .reviews-container.active {
-        cursor: grabbing;
-        cursor: -webkit-grabbing;
-        scroll-snap-type: none;
-        /* 마우스 드래그 중에는 부드럽게 움직이도록 스냅 해제 */
-    }
-
-    /* 개별 리뷰 카드 */
-    .review-card {
-        /* 핵심: 카드가 화면의 80~85%만 차지하게 하여, 다음 카드가 옆에 살짝 보이도록 유도 */
-        min-width: 85%;
-        flex-shrink: 0;
-        /* 공간이 부족해도 카드가 찌그러지지 않게 보호 */
-        scroll-snap-align: start;
-        /* 스와이프 시 카드의 시작 부분에 화면이 멈춤 */
-        cursor: grab;
+    .reflection-review-name {
+        font-size: 18px;
+        margin-top: 18px;
     }
 
     /* 4. BiBy Guide 섹션 (아코디언) */
@@ -813,7 +786,9 @@
 
     .biby-guide-section {
         padding: 60px 0;
+        margin-top: 80px;
     }
+    
 
     .accordion-header .title {
         font-size: 20px;
@@ -825,28 +800,34 @@
         font-size: 16px;
         /* 내용 폰트 축소 */
     }
+
+    /* .wave-box {
+        background-color: #122A51;
+    } */
 }
 
 /* --- Mobile Portrait (402px) --- */
 @media screen and (max-width: 402px) {
-
-    /* 1. 공통 레이아웃 및 텍스트 */
-    .container {
-        padding: 40px 20px;
-        /* 좌우 여백 최소화 */
-    }
-
-    .en-title {
-        font-size: 32px;
-        /* 제목 크기 대폭 축소 */
-        letter-spacing: -1px;
-    }
 
     .title-sub {
         font-size: 14px;
         /* 서브 타이틀 축소 */
         word-break: keep-all;
         /* 한글 단어 단위 줄바꿈 */
+    }
+
+    /* Archive Brand Band */
+    .archive-brand-band::before {
+        font-size: clamp(40px, 8vw, 60px);
+    }
+
+    .archive-brand-band__logo {
+        width: clamp(80px, 14vw, 100px);
+        height: clamp(80px, 14vw, 100px);
+        max-width: 100px;
+        max-height: 100px;
+        top: 45%;
+        transform: translate(-50%, -50%);
     }
 
     /* 2. Find Birdy 섹션 (모바일 최적화) */
@@ -901,19 +882,10 @@
     }
 
     /* 3. Dive Reviews 섹션 */
-    .reviews-container {
-        flex-direction: column;
-        /* 세로 정렬 */
-        gap: 20px;
-    }
-
-    .review-card {
-        /* 모바일에서는 여백이 좁아지므로 카드 비율을 약간 늘려 최적화 */
-        min-width: 90%;
-    }
-
-    .review-card .desc {
-        font-size: 14px;
+    .reflection-review-card {
+        width: min(72vw, 280px);
+        flex-basis: min(72vw, 280px);
+        min-height: min(220px, 70vw);
     }
 
     /* 4. BiBy Guide 섹션 (배경 및 아코디언) */
@@ -944,5 +916,9 @@
 
     .inner-content {
         padding: 0 15px 25px 15px;
+    }
+
+    .dive-reviews-section .en-title {
+        margin-bottom: 20px;
     }
 }
