@@ -1,0 +1,164 @@
+@import 'common.css';
+@import 'footer-b.css';
+
+body {
+    line-height: 1.6;
+    font-family: 'Noto Sans KR';
+    color: var(--black-color);
+    overflow-x: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 120;
+}
+
+
+.Scuba-diving-top {
+    width: 100%;
+    height: 725px;
+    margin-top: 120px;
+    margin-bottom: 240px;
+    text-align: center;
+}
+
+.big-title {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 800;
+    /* BLACK 굵기 */
+    font-size: 200px;
+    color: var(--gray-color);
+    /* #f2f2f2 */
+    letter-spacing: -5px;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+
+.scuba-diving-top-img {
+    width: 100%;
+    margin-top: -40px;
+}
+
+.scuba-cont-text {
+    display: flex;
+}
+
+.en-title {
+    width: 50%;
+}
+
+.scuba-text-wrap {
+    width: 50%;
+    height: 399px;
+}
+
+.scaba-text-main {
+    margin-bottom: 20px;
+}
+
+.title {
+    color: var(--black-color);
+    font-size: clamp(24px, 2.8vw, 36px);
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 130%;
+}
+
+.subtitle {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.desc {
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+.scuba-img-wrap {
+    display: flex;
+    width: 100%;
+    height: 560px;
+    gap: 1%;
+}
+
+.scuba-img-wrap img {
+    width: 49.5%;
+}
+
+.scuba-gear{
+    width: 100%;
+    height: 881px;
+    margin-top: 240px;
+}
+
+.right {
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+.scuba-gear-wrap {
+    width: 100%;
+    height: 720px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.scuba-gear-img-wrap {
+    width: 42%;
+    height: 100%;
+    padding: 34px 0 34px 85px;
+}
+
+
+
+.scuba-gear-box-wrap {
+    width: 58%;
+    height: 100%;
+    gap: 1%;
+    display: flex;
+}
+
+.scuba-gear-box{
+    width: 49.5%;
+    height: 100%;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+.license {
+    width: 100%;
+    height: 100%;
+    margin-top: 240px;
+    margin-bottom: 240px;
+    display: flex;
+}
+
+.license-cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.license-text {
+    width: 33%;
+}
+
+
+.license-box-wrap {
+    width: 58%;
+}
+
+.license-box {
+    width: 100%;
+    height: 317px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
