@@ -6,6 +6,7 @@
 window.DIVING_ARCHIVE_POSTS = [
     {
         id: 'koh-tao',
+        url: '../posting/kotao.html',
         level: 'beginner',
         badgeLevel: 'Beginner',
         date: '25.12.18',
@@ -20,6 +21,7 @@ window.DIVING_ARCHIVE_POSTS = [
     },
     {
         id: 'sipadan',
+        url: '../posting/sipadan.html',
         level: 'advanced',
         badgeLevel: 'Advanced',
         date: '25.11.02',
@@ -34,6 +36,7 @@ window.DIVING_ARCHIVE_POSTS = [
     },
     {
         id: 'socorro',
+        url: '../posting/socorro.html',
         level: 'advanced',
         badgeLevel: 'Advanced',
         date: '25.09.01',
@@ -48,6 +51,7 @@ window.DIVING_ARCHIVE_POSTS = [
     },
     {
         id: 'bohol',
+        url: '../posting/bohol.html',
         level: 'beginner',
         badgeLevel: 'Beginner',
         date: '24.11.22',
@@ -62,6 +66,7 @@ window.DIVING_ARCHIVE_POSTS = [
     },
     {
         id: 'bali',
+        url: '../posting/bali.html',
         level: 'intermediate',
         badgeLevel: 'Intermediate',
         date: '24.05.14',
@@ -76,6 +81,7 @@ window.DIVING_ARCHIVE_POSTS = [
     },
     {
         id: 'galapagos',
+        url: '../posting/galapagos.html',
         level: 'advanced',
         badgeLevel: 'Advanced',
         date: '24.08.20',
@@ -90,6 +96,7 @@ window.DIVING_ARCHIVE_POSTS = [
     },
     {
         id: 'dahab',
+        url: '../posting/dahab.html',
         level: 'beginner',
         badgeLevel: 'Beginner',
         date: '25.07.11',
@@ -104,6 +111,7 @@ window.DIVING_ARCHIVE_POSTS = [
     },
     {
         id: 'palau',
+        url: '../posting/palau.html',
         level: 'intermediate',
         badgeLevel: 'Intermediate',
         date: '23.11.10',
@@ -118,6 +126,7 @@ window.DIVING_ARCHIVE_POSTS = [
     },
     {
         id: 'raja-ampat',
+        url: '../posting/rajaampat.html',
         level: 'advanced',
         badgeLevel: 'Advanced',
         date: '25.03.02',
@@ -132,6 +141,7 @@ window.DIVING_ARCHIVE_POSTS = [
     },
     {
         id: 'okinawa',
+        url: '../posting/okinawa.html',
         level: 'beginner',
         badgeLevel: 'Beginner',
         date: '25.01.08',
@@ -146,6 +156,7 @@ window.DIVING_ARCHIVE_POSTS = [
     },
     {
         id: 'maldives',
+        url: '../posting/maldives.html',
         level: 'beginner',
         badgeLevel: 'Beginner',
         date: '25.06.12',
@@ -160,6 +171,7 @@ window.DIVING_ARCHIVE_POSTS = [
     },
     {
         id: 'red-sea',
+        url: '../posting/redsea.html',
         level: 'intermediate',
         badgeLevel: 'Intermediate',
         date: '24.09.30',
