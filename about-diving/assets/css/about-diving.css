@@ -7,6 +7,10 @@ body {
     color: var(--black-color);
 }
 
+.title{
+    font-family: 'poppins';
+}
+
 .inner {
     margin-left: 120px;
     margin-right: 120px;
@@ -62,6 +66,101 @@ body {
     /* DemiLight */
     line-height: 1.6;
 }
+
+.container {
+    display: flex;
+    padding: 0;
+}
+
+.biby-guide-section {
+    width: 100%;
+    /* min-height: 1982px; */
+    background: url('../images/bg-wave.png') no-repeat center center;
+    background-size: cover;
+    padding: 160px 0;
+}
+
+.biby-guide-section .en-title {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+
+.accordion-list {
+    max-width: 972px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    background: #F2F2F2;
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+    border-radius: 20px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    transition: background 0.3s ease;
+}
+
+.accordion-item:hover {
+    background: #f2f2f2;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 40px;
+    cursor: pointer;
+}
+
+.accordion-header .title {
+    font-size: 32px;
+}
+
+.btn-arrow {
+    width: 44px;
+    height: 44px;
+    transition: transform 0.4s ease;
+}
+
+.btn-arrow img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inner-content {
+    padding: 0 40px 50px 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 40px;
+}
+
+.guide-box {
+    margin-top: 35px;
+}
+
+.guide-box .card-title {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.accordion-item.active .accordion-body {
+    max-height: 1200px;
+}
+
+.accordion-item.active .btn-arrow {
+    transform: rotate(180deg);
+}
+
+.accordion-item.active {
+    background: #f2f2f2;
+}
+
 
 /* Find Your Blue */
 .find-blue {
@@ -583,6 +682,11 @@ body {
     .sub-text,
     .guide-text {
         font-size: 18px;
+    }
+
+    /* 아코디언 */
+    .container{
+        display: block;
     }
 
     /* Find Blue 카드 */
