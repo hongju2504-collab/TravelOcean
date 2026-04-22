@@ -1,5 +1,13 @@
 /* common.css는 index/detail에서 별도 링크 */
 
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 120;
+}
+
 /* ---------- Hero (필터·그리드와 독립된 상단 영역) ---------- */
 .diving-archive-page {
     overflow-x: hidden;
