@@ -1,7 +1,7 @@
-@import 'common.css';
-@import 'footer-w.css';
+/* @import 'common.css'; */
+/* @import 'footer-w.css'; */
 
-body {
+/* body {
     line-height: 1.6;
     font-family: 'Noto Sans KR';
     color: var(--black-color);
@@ -9,7 +9,7 @@ body {
 
 .title {
     font-family: 'poppins';
-}
+} */
 
 .inner {
     margin-left: 120px;
@@ -47,16 +47,19 @@ body {
     /* Medium */
     line-height: 1;
     margin-bottom: 24px;
-    /* font-family: ; */
+    color: var(--white-color);
+    max-width: initial;
 }
 
 /* 서브 타이틀 */
-.sub-title {
+.about-diving-hero .sub-title {
+    font-family: 'Poppins';
     font-size: 24px;
     font-weight: 400;
     /* Regular */
     line-height: 1.6;
     margin-bottom: 80px;
+    
 }
 
 /* 설명 텍스트 */
@@ -94,7 +97,7 @@ body {
 
 .find-blue-left h2 {
     font-size: 72px;
-    font-weight: 500;
+    font-weight: 400;
     color: #203EB5;
 }
 
@@ -348,11 +351,12 @@ body {
 
 /* 슬라이더 */
 .attractions-slider {
-    display: flex;
-    gap: 50px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    /* Swiper가 처리하므로 flex, gap, overflow 제거 */
     padding-bottom: 20px;
+}
+
+.attractions-slider .swiper-slide {
+    width: auto; /* 카드 너비 유지 */
 }
 
 .attractions-slider::-webkit-scrollbar {
@@ -363,13 +367,9 @@ body {
 .attraction-card {
     width: 480px;
     height: 572px;
-    flex: 0 0 auto;
-    background: #f2f2f2;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     padding: 24px;
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
 }
 
 /* 이미지 */
@@ -994,7 +994,8 @@ body {
 }
 
 .accordion-header .title {
-    font-size: 32px;
+    font-size: clamp(24px, 1.4583vw, 28px);
+    font-weight: 500;
 }
 
 .btn-arrow {
@@ -1018,7 +1019,10 @@ body {
 .inner-content {
     padding: 0 40px 50px 40px;
     border-top: 1px solid #f2f2f2;
-    padding-top: 40px;
+    /* padding-top: 40px; */
+}
+.inner-content .subtitle {
+    font-size: 18px;
 }
 
 .guide-box {

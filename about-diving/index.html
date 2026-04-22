@@ -49,7 +49,13 @@
     <!-- <meta name="google-site-verification" content="Di_nPPle_ReqRTUFP4r6TSHClg8lrpVMVn7oZD_Fdis" /> -->
 
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600&display=swap"
+        rel="stylesheet">
 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="../assets/css/reset/reset.min.css">
     <link rel="stylesheet" href="../assets/css/common/common.css">
     <link rel="stylesheet" href="./assets/css/footer-w.css">
@@ -137,9 +143,9 @@
         </div>
     </nav>
     <main>
-        <section class="hero">
+        <section class="hero about-diving-hero">
             <div class="hero-inner">
-                <h1>
+                <h1 class="en-title">
                     Discover the Unseen<br />
                     70% of Our Planet.
                 </h1>
@@ -170,12 +176,12 @@
                     <div class="find-blue-text">
                         <p class="main-text">
                             수영을 못해도 괜찮을까? <br>
-                            숨은 어떻게 쉬지? 
+                            숨은 어떻게 쉬지?
                         </p>
 
                         <p class="sub-text">
-                            고민은 잠시 내려놓으셔도 좋습니다. 
-                            모든 전설적인 다이버들도 당신과 같은 궁금증에서 시작했습니다.
+                            고민은 잠시 내려놓으셔도 좋습니다. <br>
+                            모든 전설적인 다이버들도 당신과 같은 궁금증에서 시작했습니다. <br>
                             물과 친하지 않아도 괜찮아요, <span>바다는 누구에게나 열려 있으니까요.</span>
                         </p>
                     </div>
@@ -348,7 +354,7 @@
 
                     <div class="find-blue-text">
                         <p class="main-text">
-                            당신은 느긋한 탐험가인가요,<br/>
+                            당신은 느긋한 탐험가인가요,<br />
                             자유로운 도전가 인가요?
                         </p>
 
@@ -491,60 +497,90 @@
                 </div>
 
                 <!-- 슬라이드 영역 -->
-                <div class="attractions-slider">
+                <div class="swiper attractions-slider">
+                    <div class="swiper-wrapper">
 
-                    <!-- 카드 12개 -->
+                        <!-- 카드 12개 -->
 
-                    <div class="attraction-card"><img src="./assets/images/card (1).webp">
-                        <h3>WALL(월)</h3>
-                        <p>수직으로 깎아지른 듯한 수중 절벽을 따라 이동하는 방식입니다. 끝이 보이지 않는 깊은 바다(Deep Blue)의 웅장함을 느낄 수 있으며, 절벽에 붙어 사는 화려한
-                            연산호와 부채산호를 관찰하기 좋습니다.</p>
-                    </div>
-                    <div class="attraction-card"><img src="./assets/images/card (2).webp">
-                        <h3>DROP-OFF(드롭오프)</h3>
-                        <p>얕은 수심의 산호초 지대(리프)가 끝나고 갑자기 수직으로 깊어지는 경계 지점입니다. 대형 어종들이 자주 출몰하는 길목이기도 합니다.</p>
-                    </div>
-                    <div class="attraction-card"><img src="./assets/images/card (3).webp">
-                        <h3>CHANNEL(채널)</h3>
-                        <p>두 개의 섬 사이나, 거대한 산호초 지형(리프) 사이가 좁게 터져 있어 빠른 물길이 형성된 지형을 말합니다. 조류가 강할수록 더 크고 멋진 생물들을 만날 확률이
-                            높습니다.</p>
-                    </div>
-                    <div class="attraction-card"><img src="./assets/images/card (4).webp">
-                        <h3>Arch(아치)</h3>
-                        <p>바위가 가운데가 뚫린 무지개 모양의 문처럼 생긴 지형입니다. 아치 아래를 통과하면서 멋진 사진을 남기기 좋아 인기가 많습니다.</p>
-                    </div>
-                    <div class="attraction-card"><img src="./assets/images/card (5).webp">
-                        <h3>TUNNEL(터널)</h3>
-                        <p>입구와 출구가 연결된 긴 통로 형태의 지형입니다. 터널 안을 통과할 때의 스릴과 출구 쪽에서 들어오는 푸른 빛이 환상적입니다.</p>
-                    </div>
-                    <div class="attraction-card"><img src="./assets/images/card (6).webp">
-                        <h3>CANYON(협곡)</h3>
-                        <p>양옆으로 높은 바위 벽이 서 있어 마치 협곡 사이를 지나가는 듯한 지형입니다. 지형이 만들어내는 신비로운 풍경과 빛의 내림을 즐길 수 있습니다.</p>
-                    </div>
-                    <div class="attraction-card"><img src="./assets/images/card (7).webp">
-                        <h3>SLOPE(슬로프)</h3>
-                        <p>경사면 지형입니다. 완만하게 깊어지기 때문에 초보자들이 심리적으로 안정감을 느끼며 다이빙하기 좋고, 모래나 작은 바위 사이에 숨은 생물들을 찾기에 적합합니다.</p>
-                    </div>
-                    <div class="attraction-card"><img src="./assets/images/card (8).webp">
-                        <h3>SAND(샌드)</h3>
-                        <p>바닥이 고운 모래로 된 지형입니다. 시야가 탁 트여 있으며, 모래 속에 몸을 숨기고 사는 가오리나 가자미 같은 생물들을 관찰할 수 있습니다.</p>
-                    </div>
-                    <div class="attraction-card"><img src="./assets/images/card (9).webp">
-                        <h3>GARDEN(가든)</h3>
-                        <p>수천 년간 자라난 산호 군락지. 바다의 열대우림이라 불릴 만큼 가장 화려한 색채를 자랑합니다.</p>
-                    </div>
-                    <div class="attraction-card"><img src="./assets/images/card (10).webp">
-                        <h3>CAVE(동굴)</h3>
-                        <p>빛이 전혀 들지 않는 깊은 동굴 안쪽까지 들어가는 전문적인 다이빙입니다.</p>
-                    </div>
-                    <div class="attraction-card"><img src="./assets/images/card (11).webp">
-                        <h3>CAVERN(캐번)</h3>
-                        <p>동굴 입구에서 외부 빛이 보이는 정도의 밝은 구역을 탐험하는 것입니다.</p>
-                    </div>
-                    <div class="attraction-card"><img src="./assets/images/card (12).webp">
-                        <h3>Wreck(렉)</h3>
-                        <p>침몰한 배(선박), 비행기, 자동차 등 인공적인 구조물을 탐험하는 침선 다이빙입니다. 역사의 흔적을 볼 수 있고, 구조물이 인공 어초 역할을 하여 다양한 생물이
-                            서식합니다.</p>
+                        <div class="swiper-slide">
+                            <div class="attraction-card"><img src="./assets/images/card_1.webp">
+                                <h3>WALL(월)</h3>
+                                <p>수직으로 깎아지른 듯한 수중 절벽을 따라 이동하는 방식입니다. 끝이 보이지 않는 깊은 바다(Deep Blue)의 웅장함을 느낄 수 있으며, 절벽에 붙어
+                                    사는 화려한
+                                    연산호와 부채산호를 관찰하기 좋습니다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="attraction-card"><img src="./assets/images/card_2.webp">
+                                <h3>DROP-OFF(드롭오프)</h3>
+                                <p>얕은 수심의 산호초 지대(리프)가 끝나고 갑자기 수직으로 깊어지는 경계 지점입니다. 대형 어종들이 자주 출몰하는 길목이기도 합니다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="attraction-card"><img src="./assets/images/card_3.webp">
+                                <h3>CHANNEL(채널)</h3>
+                                <p>두 개의 섬 사이나, 거대한 산호초 지형(리프) 사이가 좁게 터져 있어 빠른 물길이 형성된 지형을 말합니다. 조류가 강할수록 더 크고 멋진 생물들을 만날
+                                    확률이
+                                    높습니다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="attraction-card"><img src="./assets/images/card_4.webp">
+                                <h3>Arch(아치)</h3>
+                                <p>바위가 가운데가 뚫린 무지개 모양의 문처럼 생긴 지형입니다. 아치 아래를 통과하면서 멋진 사진을 남기기 좋아 인기가 많습니다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="attraction-card"><img src="./assets/images/card_5.webp">
+                                <h3>TUNNEL(터널)</h3>
+                                <p>입구와 출구가 연결된 긴 통로 형태의 지형입니다. 터널 안을 통과할 때의 스릴과 출구 쪽에서 들어오는 푸른 빛이 환상적입니다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="attraction-card"><img src="./assets/images/card_6.webp">
+                                <h3>CANYON(협곡)</h3>
+                                <p>양옆으로 높은 바위 벽이 서 있어 마치 협곡 사이를 지나가는 듯한 지형입니다. 지형이 만들어내는 신비로운 풍경과 빛의 내림을 즐길 수 있습니다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="attraction-card"><img src="./assets/images/card_7.webp">
+                                <h3>SLOPE(슬로프)</h3>
+                                <p>경사면 지형입니다. 완만하게 깊어지기 때문에 초보자들이 심리적으로 안정감을 느끼며 다이빙하기 좋고, 모래나 작은 바위 사이에 숨은 생물들을 찾기에
+                                    적합합니다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="attraction-card"><img src="./assets/images/card_8.webp">
+                                <h3>SAND(샌드)</h3>
+                                <p>바닥이 고운 모래로 된 지형입니다. 시야가 탁 트여 있으며, 모래 속에 몸을 숨기고 사는 가오리나 가자미 같은 생물들을 관찰할 수 있습니다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="attraction-card"><img src="./assets/images/card_9.webp">
+                                <h3>GARDEN(가든)</h3>
+                                <p>수천 년간 자라난 산호 군락지. 바다의 열대우림이라 불릴 만큼 가장 화려한 색채를 자랑합니다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="attraction-card"><img src="./assets/images/card_10.webp">
+                                <h3>CAVE(동굴)</h3>
+                                <p>빛이 전혀 들지 않는 깊은 동굴 안쪽까지 들어가는 전문적인 다이빙입니다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="attraction-card"><img src="./assets/images/card_11.webp">
+                                <h3>CAVERN(캐번)</h3>
+                                <p>동굴 입구에서 외부 빛이 보이는 정도의 밝은 구역을 탐험하는 것입니다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="attraction-card"><img src="./assets/images/card_12.webp">
+                                <h3>Wreck(렉)</h3>
+                                <p>침몰한 배(선박), 비행기, 자동차 등 인공적인 구조물을 탐험하는 침선 다이빙입니다. 역사의 흔적을 볼 수 있고, 구조물이 인공 어초 역할을 하여 다양한
+                                    생물이
+                                    서식합니다.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -553,7 +589,7 @@
 
     <!-- footer  -->
     <div class="footer">
-        <div class="wave-box">
+        <div>
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                 <defs>
@@ -572,8 +608,8 @@
             <div class="footer-content container">
                 <div class="footer-left">
                     <h2>
-                        <a href="../index.html">
-                            <img src="../assets/images/logo-txt.webp" alt="footer-logo">
+                        <a href="#">
+                            <img src="./assets/images/logo-txt.webp" alt="footer-logo">
                         </a>
                     </h2>
                     <p class="copyright">ⓒ Copyright by JinGanJang</p>
@@ -585,12 +621,12 @@
                     <ul class="sns-list">
                         <li class="sns">
                             <a href="#">
-                                <img src="../assets/images/sns-facebook.webp" alt="facebook">
+                                <img src="./assets/images/sns-facebook.webp" alt="facebook">
                             </a>
                         </li>
                         <li class="sns">
                             <a href="#">
-                                <img src="../assets/images/sns-instagram.webp" alt="instagram">
+                                <img src="./assets/images/sns-instagram.webp" alt="instagram">
                             </a>
                         </li>
                     </ul>
@@ -599,6 +635,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../assets/js/menu.js"></script>
     <script src="./assets/js/about-diving.js"></script>
 </body>
