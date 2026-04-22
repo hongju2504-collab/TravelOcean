@@ -39,7 +39,7 @@
         }
         if (heroDesc) heroDesc.textContent = post.excerpt || '';
         if (heroRead) {
-            heroRead.href = 'detail.html?id=' + encodeURIComponent(post.id);
+            heroRead.href = post.url || ('detail.html?id=' + encodeURIComponent(post.id));
         }
     }
 
@@ -54,12 +54,7 @@
             art.dataset.level = post.level;
 
             var a = document.createElement('a');
-            a.href = 'detail.html?id=' + encodeURIComponent(post.id);
-            a.addEventListener('click', function (e) {
-                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
-                e.preventDefault();
-                applyHero(post);
-            });
+            a.href = post.url || ('detail.html?id=' + encodeURIComponent(post.id));
 
             var txt = document.createElement('div');
             txt.className = 'card-txt-wrap';
