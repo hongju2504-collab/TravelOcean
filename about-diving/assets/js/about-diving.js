@@ -76,7 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
     slider.addEventListener('mousedown', stopSlide);
     slider.addEventListener('mouseup', startSlide);
     slider.addEventListener('mouseleave', startSlide);
-
     
 });
 
