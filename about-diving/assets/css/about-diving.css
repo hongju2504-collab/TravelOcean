@@ -404,6 +404,15 @@ body {
     color: #0a2a6c;
 }
 
+/* 드래그 스와이프 */
+.attractions-slider {
+    cursor: grab;
+}
+
+.attractions-slider.dragging {
+    cursor: grabbing;
+}
+
 /* 반응형 */
 @media (max-width: 1280px) {
 
