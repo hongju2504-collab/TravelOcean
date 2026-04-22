@@ -208,7 +208,6 @@ strong {
 
 .content-bottom {
     width: 100%;
-    margin-bottom: 160px;
 }
 
 .bottom-wrap {
@@ -283,11 +282,19 @@ strong {
 .editor-title {
     display: flex;
     margin-bottom: 5px;
+    align-items: center;
+}
+.editor-title img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
 }
 
 /* Palau: BiBy Promotions (1개 + 2개, gap 40px) */
 .palau-biby-promotions {
-    padding: 140px 0 160px;
+    padding: clamp(60px, 10vw, 100px) 0 clamp(100px, 10vw, 160px);
+    margin-top: clamp(100px, 10vw, 160px);
+    background: linear-gradient(to top, #fff, #f2f2f2);
 }
 
 .palau-biby-promotions .section-title {
@@ -423,7 +430,7 @@ strong {
     }
     .content-bottom {
         height: auto;
-        padding-bottom: 80px;
+        padding-bottom: clamp(40px, 8vw, 80px);
     }
     .bottom-wrap {
         padding-left: 120px;
@@ -523,6 +530,7 @@ strong {
     .dry {
         margin-right: 8px;
     }
+    
 }
 
 /* ─── 1024px 이하(태블릿) : 레이아웃 유지 + 갭·폰트·이미지 축소 ─── */
@@ -618,6 +626,18 @@ strong {
     .palau-biby-card-text span {
         font-size: 12px;
     }
+
+    .editor-title img {
+        width: clamp(28px, 4vw, 32px);
+        height: clamp(28px, 4vw, 32px);
+        margin-right: 10px;
+    }
+
+    .palau-biby-promotions {
+        padding: clamp(20px, 10vw, 60px) 0 clamp(60px, 10vw, 100px);
+        margin-top: clamp(60px, 10vw, 100px);
+        background: linear-gradient(to top, #fff, #f2f2f2);
+    }
 }
 
 /* ─── 768px 이하 : 전체 컬럼(모바일) 레이아웃 ────────────────── */
@@ -674,7 +694,7 @@ strong {
     }
     .content-bottom {
         height: auto;
-        padding-bottom: 50px;
+        padding-bottom: clamp(20px, 7vw, 60px);
     }
     .bottom-wrap {
         padding-left: 0;
@@ -756,5 +776,11 @@ strong {
         max-height: clamp(160px, 32vw, 240px);
         object-fit: cover;
         aspect-ratio: 16 / 10;
+    }
+
+    .editor-title img {
+        width: clamp(24px, 4vw, 28px);
+        height: clamp(24px, 4vw, 28px);
+        margin-right: 10px;
     }
 }
