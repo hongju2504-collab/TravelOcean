@@ -79,3 +79,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. 모든 아코디언 헤더(질문 영역)를 선택합니다.
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    // 스크립트 에러 방지를 위해 아코디언이 있는 페이지에서만 실행되도록 체크합니다.
+    if (accordionHeaders.length === 0) return;
+
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', function () {
+            // 클릭된 헤더의 부모 요소(.accordion-item)를 가져옵니다.
+            const currentItem = this.parentElement;
+
+            // 2. 다른 열려있는 아코디언 닫기 (하나만 열어두기)
+            // 여러 개를 동시에 열어두고 싶다면 이 아래 forEach 블록을 삭제하세요.
+            const allItems = document.querySelectorAll('.accordion-item');
+            allItems.forEach(item => {
+                if (item !== currentItem && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // 3. 클릭한 아이템의 active 클래스를 토글합니다.
+            // active가 있으면 제거(닫기), 없으면 추가(열기)하여 화살표 회전과 높이 변화 CSS를 작동시킵니다.
+            currentItem.classList.toggle('active');
+        });
+    });
+});
